@@ -1,0 +1,380 @@
+export interface Project {
+  id: string;
+  title: string;
+  category: 'web' | 'mobile' | 'automation' | 'systems';
+  categoryLabel: string;
+  impact: string;
+  problem: string;
+  solution: string;
+  techStack: string[];
+  demoUrl?: string;
+  githubUrl?: string;
+  image?: string;
+}
+
+export interface Service {
+  id: string;
+  title: string;
+  iconName: string;
+  description: string;
+  highlights: string[];
+}
+
+export interface SkillCategory {
+  name: string;
+  skills: { name: string; level?: string }[];
+}
+
+export interface ExperienceItem {
+  period: string;
+  role: string;
+  organization: string;
+  location: string;
+  description: string[];
+  tags: string[];
+}
+
+export interface EducationItem {
+  degree: string;
+  institution: string;
+  location: string;
+  year: string;
+  details: string;
+}
+
+export interface CertificationItem {
+  title: string;
+  issuer: string;
+  year: string;
+}
+
+export const portfolioData = {
+  personal: {
+    name: "Triono Hidayat",
+    title: "GovTech & Full-Stack Solutions Developer",
+    secondaryTitle: "IT Systems Officer | AI & Workflow Automation (n8n) | RFID & Mobile Specialist",
+    headline: "Turning Complex Workflows into High-Performance Web & Mobile Solutions",
+    subheadline:
+      "Bridging public-sector GovTech standards, RFID/WMS logistics engineering, and modern Next.js & Android development for global businesses.",
+    about:
+      "I am an IT Systems Officer, Solutions Developer, and Project Manager with extensive cross-industry experience spanning enterprise GovTech, RFID & Warehouse Management Systems (WMS), and native Android application development. Currently serving as Penata Kelola Sistem dan Teknologi Informasi at the Ministry of Manpower of the Republic of Indonesia (Kemnaker), I focus on process digitalization, AI workflow automation (n8n), and scalable software systems. As an independent remote consultant and freelance project manager, I lead cross-functional initiatives and build high-performance, resilient digital solutions for international clients.",
+    status: "Available for Remote Freelance & Contract Projects",
+    location: "Jakarta, Indonesia (UTC+7) • Working Worldwide",
+    avatarUrl: "/profile.png",
+    yearsOfExperience: "8+",
+    completedProjects: "25+",
+    hoursAutomated: "2,000+",
+  },
+
+  contacts: {
+    email: "trionohidayat3@gmail.com",
+    whatsappRaw: "6287788084441",
+    whatsappUrl:
+      "https://wa.me/6287788084441?text=Hello%20Triono,%20I'd%20like%20to%20discuss%20a%20freelance%20project%20with%20you.",
+    whatsappNumber: "+62 877-8808-4441",
+    linkedin: "https://www.linkedin.com/in/triono-hidayat",
+    github: "https://github.com/trionohidayat",
+    youtube: "https://youtube.com/@trionohidayat",
+  },
+
+  services: [
+    {
+      id: "automation",
+      title: "Workflow Automation (n8n) & AI",
+      iconName: "Cpu",
+      description:
+        "Architecting resilient workflow automations and data pipelines using n8n, AI agents, and webhooks to eliminate repetitive administrative overhead and synchronize cross-platform data.",
+      highlights: [
+        "End-to-End n8n Workflow Design (Self-Hosted & Cloud)",
+        "AI Agent & Generative AI Integration",
+        "Multi-Service Webhooks & REST API Data Pipelines",
+        "GovTech & Enterprise Process Digitization",
+      ],
+    },
+    {
+      id: "mobile-dev",
+      title: "Mobile & RFID Solutions",
+      iconName: "Smartphone",
+      description:
+        "Engineering high-performance native Android applications with Java and Kotlin, featuring offline-first capabilities, Room DB, and deep hardware integrations (RFID, NFC, Barcode).",
+      highlights: [
+        "Native Android Development with Kotlin & Java (MVVM)",
+        "Hardware Integration: RFID (HF/UHF), Barcode Scanners, NFC",
+        "Offline-First Architecture with Local SQLite / Room Database",
+        "Warehouse Management System (WMS) & Logistics Apps",
+      ],
+    },
+    {
+      id: "web-dev",
+      title: "Full-Stack Web Development",
+      iconName: "Globe",
+      description:
+        "Building fast, modern, and SEO-optimized web applications and SaaS dashboards using TypeScript, Next.js 16, React 19, Tailwind CSS, and Prisma ORM.",
+      highlights: [
+        "Modern Stack: Next.js 16 (App Router), React 19, TypeScript",
+        "Database Modeling with Prisma ORM & PostgreSQL / MySQL",
+        "Server-Side Rendering (SSR) & High-Speed API Routes",
+        "CDN, Caching & Performance Architecture",
+      ],
+    },
+    {
+      id: "it-consulting",
+      title: "IT Systems & Project Management",
+      iconName: "Layers",
+      description:
+        "Guiding digital initiatives from initial technical proposals and PoC to deployment. Proven track record leading cross-functional teams, hardware vendors, and national-scale tenders.",
+      highlights: [
+        "Agile Project Leadership (Jira, Trello, Remote Management)",
+        "Technical Documentation, System SOPs & Tender Proposals",
+        "Hardware-Software Interoperability & Risk Mitigation",
+        "Data Governance & Operational Integrity",
+      ],
+    },
+  ] as Service[],
+
+  projects: [
+    {
+      id: "govtech-n8n",
+      title: "GovTech Process Digitization & n8n Pipeline",
+      category: "automation",
+      categoryLabel: "Workflow Automation",
+      impact: "Multi-Directorate Data Sync",
+      problem:
+        "Administrative tracking, inter-directorate data synchronization, and reporting across employment expansion initiatives involved fragmented manual workflows and communication bottlenecks.",
+      solution:
+        "Implemented automated workflow pipelines using n8n and REST APIs to automate data validation, internal report aggregation, and cross-department notification feeds.",
+      techStack: ["n8n", "PostgreSQL", "REST API", "Webhooks", "GovTech", "Python"],
+      demoUrl: "https://demo.example.com/govtech",
+      githubUrl: "https://github.com/trionohidayat",
+    },
+    {
+      id: "wms-rfid",
+      title: "Enterprise WMS & RFID Tracking Solution",
+      category: "systems",
+      categoryLabel: "Systems & RFID",
+      impact: "10+ National Tender Deployments",
+      problem:
+        "Manual inventory verification in large warehouses resulted in stock discrepancies, sluggish dispatch times, and lack of real-time asset visibility.",
+      solution:
+        "Engineered an end-to-end Warehouse Management System (WMS) integrating RFID (HF/UHF) hardware, handheld barcode scanners, and an Android client connected to central servers via MVVM & REST API.",
+      techStack: ["Android (Kotlin)", "RFID HF/UHF", "Barcode SDK", "Room DB", "PostgreSQL", "MVVM"],
+      demoUrl: "https://demo.example.com/rfid-wms",
+      githubUrl: "https://github.com/trionohidayat",
+    },
+    {
+      id: "sap-express-app",
+      title: "SAP Express Logistics & Digital Wallet Mobile Suite",
+      category: "mobile",
+      categoryLabel: "Mobile App",
+      impact: "Nationwide Package & Payment Sync",
+      problem:
+        "Field logistics operations needed real-time package tracking, shipment milestone logging, and a secure internal digital wallet for operational payment transactions.",
+      solution:
+        "Developed responsive native Android applications featuring robust digital wallet authentication, shipment tracking API integration, and barcode scanning modules.",
+      techStack: ["Android (Java/Kotlin)", "Digital Wallet", "REST API", "Package Tracking", "Security"],
+      demoUrl: "https://demo.example.com/sap-express",
+      githubUrl: "https://github.com/trionohidayat",
+    },
+    {
+      id: "fullstack-prisma-platform",
+      title: "Cloud Operations & Data Management Platform",
+      category: "web",
+      categoryLabel: "Full-Stack Web",
+      impact: "Sub-Second Query Latency",
+      problem:
+        "Managing distributed operational data required a type-safe, scalable web interface capable of real-time query performance and automated schema migrations.",
+      solution:
+        "Constructed a high-throughput full-stack web application leveraging Next.js 16, TypeScript, Prisma ORM, and PostgreSQL with CDN caching optimization.",
+      techStack: ["Next.js 16", "TypeScript", "Prisma ORM", "PostgreSQL", "Tailwind CSS"],
+      demoUrl: "https://demo.example.com/cloud-platform",
+      githubUrl: "https://github.com/trionohidayat",
+    },
+  ] as Project[],
+
+  skills: [
+    {
+      name: "Top & Full-Stack",
+      skills: [
+        { name: "TypeScript" },
+        { name: "Full-Stack Development" },
+        { name: "Prisma ORM" },
+        { name: "Next.js 16 (App Router)" },
+        { name: "React 19" },
+        { name: "Tailwind CSS v4" },
+      ],
+    },
+    {
+      name: "Mobile & Embedded",
+      skills: [
+        { name: "Android Native (Kotlin & Java)" },
+        { name: "MVVM + Repository Pattern" },
+        { name: "Room Database (SQLite)" },
+        { name: "RFID & Barcode SDK Integration" },
+        { name: "NFC & Bluetooth Hardware Sync" },
+      ],
+    },
+    {
+      name: "Workflow & Automation",
+      skills: [
+        { name: "n8n (Self-Hosted & Cloud)" },
+        { name: "Generative AI Integration" },
+        { name: "RESTful APIs & Webhooks" },
+        { name: "Internet of Things (IoT)" },
+        { name: "Python Scripting" },
+      ],
+    },
+    {
+      name: "Database, Cloud & DevOps",
+      skills: [
+        { name: "PostgreSQL" },
+        { name: "MySQL" },
+        { name: "Redis Caching" },
+        { name: "CDN & Performance Tuning" },
+        { name: "Docker & Linux VPS" },
+        { name: "Git & GitHub Version Control" },
+      ],
+    },
+    {
+      name: "Systems & Project Management",
+      skills: [
+        { name: "IT Project Management (Agile, Jira, Trello)" },
+        { name: "GovTech Information Systems" },
+        { name: "Warehouse Management Systems (WMS)" },
+        { name: "Technical Documentation & SOPs" },
+        { name: "Presales, PoC & Tender Proposals" },
+      ],
+    },
+  ] as SkillCategory[],
+
+  experiences: [
+    {
+      period: "Mei 2025 – Present",
+      role: "Penata Kelola Sistem dan Teknologi Informasi",
+      organization: "Kementerian Ketenagakerjaan Republik Indonesia (Kemnaker)",
+      location: "South Jakarta, Indonesia",
+      description: [
+        "Direktorat Bina Penempatan Tenaga Kerja dan Perluasan Kesempatan Kerja (Binapenta & PKK) – Subbagian Tata Usaha.",
+        "Mengelola dan mengembangkan sistem informasi internal untuk menunjang program-program strategis Perluasan Kesempatan Kerja.",
+        "Memelopori digitalisasi proses dan automasi alur kerja (workflow automation) menggunakan platform seperti n8n.",
+        "Menyusun dokumentasi teknis, SOP sistem digital, serta memastikan keamanan dan integritas data operasional lintas direktorat.",
+        "Mendukung pemetaan data, visualisasi informasi berbasis teknologi, dan sinkronisasi data dengan tim pusat.",
+      ],
+      tags: ["GovTech", "n8n Automation", "Data Governance", "SOP & Documentation", "Kemnaker"],
+    },
+    {
+      period: "Juni 2025 – November 2025",
+      role: "Remote Project Manager (Freelance)",
+      organization: "PT Wahana Datarindo Sempurna",
+      location: "South Jakarta, Indonesia (Remote)",
+      description: [
+        "Dipercaya memimpin dan mengawasi pelaksanaan proyek WMS dan sistem berbasis software & RFID secara end-to-end.",
+        "Menjadi penghubung utama antara pemangku kepentingan (stakeholders), tim developer, vendor hardware, dan pengguna akhir.",
+        "Mengatur ritme kerja tim pengembang jarak jauh dan memantau progres menggunakan metodologi Agile serta alat manajemen proyek (Jira/Trello).",
+        "Menjamin kualitas hasil kerja melalui manajemen risiko, pengendalian perubahan, serta sesi evaluasi rutin bersama stakeholder.",
+      ],
+      tags: ["IT Project Management", "Agile / Scrum", "Jira", "RFID Systems", "WMS"],
+    },
+    {
+      period: "Juni 2023 – Juni 2025",
+      role: "Head Software Department",
+      organization: "PT Wahana Datarindo Sempurna",
+      location: "Jakarta Selatan, Indonesia",
+      description: [
+        "Menangani seluruh proses digitalisasi dan implementasi teknologi — mulai dari pengenalan produk ke klien, presales/PoC, hingga after-sales support.",
+        "Fokus pada perancangan dan implementasi solusi berbasis RFID untuk asset tracking & people monitoring berskala nasional.",
+        "Berhasil memimpin dan menangani 10+ tender besar dari sisi teknis arsitektur maupun administratif.",
+        "Membangun sistem end-to-end dari perancangan awal hingga implementasi produksi.",
+      ],
+      tags: ["RFID Solutions", "Asset Tracking", "Tender Proposals", "PoC & Presales", "Software Leadership"],
+    },
+    {
+      period: "Juli 2022 – Juni 2023",
+      role: "Android Developer",
+      organization: "PT Wahana Datarindo Sempurna",
+      location: "South Jakarta, Indonesia",
+      description: [
+        "Mengembangkan aplikasi Android Warehouse Management System (WMS) terintegrasi dengan teknologi barcode scanner dan RFID (HF/UHF) via SDK vendor.",
+        "Mengimplementasikan offline mode dengan sinkronisasi ke server melalui RESTful API dan penyimpanan lokal Room Database.",
+        "Menerapkan arsitektur modern MVVM + Repository Pattern untuk pengelolaan kode yang skalabel dan mudah dipelihara.",
+        "Melakukan support implementasi langsung dan debugging di lapangan (on-site deployment pergudangan).",
+      ],
+      tags: ["Android", "Kotlin / Java", "MVVM", "Room DB", "RFID HF/UHF", "WMS"],
+    },
+    {
+      period: "Januari 2022 – Juni 2022",
+      role: "Android Developer",
+      organization: "PT Satria Antaran Prima Tbk. (SAP Express)",
+      location: "DKI Jakarta, Indonesia",
+      description: [
+        "Merancang dan mengembangkan aplikasi Android untuk kebutuhan Digital Wallet, Package Tracking, dan Warehouse Management.",
+        "Menerapkan mekanisme keamanan dan autentikasi kuat untuk transaksi keuangan di dalam modul Digital Wallet.",
+        "Mengintegrasikan aplikasi kurir pengiriman dengan payment gateway dan sistem manajemen pengiriman pusat.",
+      ],
+      tags: ["Android", "Digital Wallet", "Package Tracking", "Payment Integration", "Logistics"],
+    },
+    {
+      period: "Maret 2020 – Oktober 2021",
+      role: "WordPress Developer",
+      organization: "PT Spekta Cipta Interusa",
+      location: "Belitung, Kepulauan Bangka Belitung, Indonesia",
+      description: [
+        "Mengembangkan dan menerapkan Content Delivery Network (CDN) serta sistem caching untuk mereduksi latency dan mengoptimalkan kecepatan website.",
+        "Membangun sistem login yang aman untuk melindungi data pengguna dan mencegah unauthorized access.",
+        "Mengimplementasikan backup system otomatis untuk memastikan integritas data dan disaster recovery cepat saat terjadi outage.",
+      ],
+      tags: ["WordPress", "CDN", "Caching Optimization", "Web Security", "Backup & Recovery"],
+    },
+  ] as ExperienceItem[],
+
+  education: [
+    {
+      degree: "Strata I (S1) – Teknik Informatika",
+      institution: "STMIK Nusa Mandiri",
+      location: "Jakarta, Indonesia",
+      year: "2017 – 2019",
+      details:
+        "Fokus pada rekayasa perangkat lunak, sistem basis data, arsitektur komputasi, dan pengembangan solusi teknologi informasi modern.",
+    },
+    {
+      degree: "Diploma III (D3) – Teknik Komputer",
+      institution: "Universitas Bina Sarana Informatika (BSI)",
+      location: "Jakarta, Indonesia",
+      year: "2013 – 2016",
+      details:
+        "Fondasi komprehensif dalam arsitektur perangkat keras komputer, jaringan, troubleshooting sistem, dan pemrograman dasar.",
+    },
+  ] as EducationItem[],
+
+  certifications: [
+    {
+      title: "Oracle Java Programming",
+      issuer: "Oracle Academy",
+      year: "Certified",
+    },
+    {
+      title: "Belajar Fundamental Generative AI",
+      issuer: "Dicoding Indonesia / Google",
+      year: "Certified",
+    },
+    {
+      title: "Internet of Things (IoT)",
+      issuer: "Professional Certification",
+      year: "Certified",
+    },
+    {
+      title: "Dasar-dasar Mobile Programming",
+      issuer: "Dicoding Indonesia",
+      year: "Certified",
+    },
+    {
+      title: "Android dan Kotlin untuk Pemula",
+      issuer: "Dicoding Indonesia",
+      year: "Certified",
+    },
+    {
+      title: "Kotlin from Zero to Hero",
+      issuer: "Udemy / Tech Academy",
+      year: "Certified",
+    },
+  ] as CertificationItem[],
+};
