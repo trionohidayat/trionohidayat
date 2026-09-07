@@ -66,3 +66,72 @@ body {
 .glow-text {
   text-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
 }
+
+/* Optimized Print / Save-to-PDF Stylesheet */
+@media print {
+  @page {
+    margin: 1.5cm;
+    size: auto;
+  }
+
+  header,
+  nav,
+  button,
+  .no-print,
+  [aria-label="Toggle navigation menu"] {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    background-image: none !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+  }
+
+  .bg-grid-pattern {
+    background-image: none !important;
+  }
+
+  .glass-panel {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .text-white {
+    color: #111827 !important;
+  }
+
+  .text-zinc-100,
+  .text-zinc-200,
+  .text-zinc-300 {
+    color: #374151 !important;
+  }
+
+  .text-zinc-400,
+  .text-zinc-500 {
+    color: #4b5563 !important;
+  }
+
+  .bg-zinc-900,
+  .bg-zinc-950 {
+    background-color: #f3f4f6 !important;
+    color: #111827 !important;
+    border-color: #e5e7eb !important;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    break-inside: avoid;
+  }
+}
+

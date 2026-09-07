@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const inter = Inter({
@@ -12,8 +13,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://trionohidayat.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Triono Hidayat | Full-Stack & Solutions Developer",
+  metadataBase: new URL(siteUrl),
+  title: "Triono Hidayat | GovTech & Full-Stack Solutions Developer",
   description:
     "Senior Full-Stack Developer & IT Systems Specialist. Crafting high-performance Next.js web applications, Android mobile solutions, and n8n workflow automations for international clients.",
   keywords: [
@@ -26,24 +30,71 @@ export const metadata: Metadata = {
     "IT Systems Governance",
     "Freelance Software Engineer",
     "Indonesia Remote Developer",
+    "Kemnaker IT Officer",
   ],
-  authors: [{ name: "Triono Hidayat" }],
+  authors: [{ name: "Triono Hidayat", url: siteUrl }],
   creator: "Triono Hidayat",
+  alternates: {
+    canonical: siteUrl,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://trionohidayat.dev",
-    title: "Triono Hidayat | Full-Stack & Solutions Developer",
+    url: siteUrl,
+    title: "Triono Hidayat | GovTech & Full-Stack Solutions Developer",
     description:
       "Turning complex operational workflows into high-performance Web, Mobile, and Automated solutions.",
     siteName: "Triono Hidayat Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Triono Hidayat | Full-Stack & Solutions Developer",
+    title: "Triono Hidayat | GovTech & Full-Stack Solutions Developer",
     description:
       "High-performance Next.js web apps, Android solutions, and n8n workflow automations.",
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: "Triono Hidayat",
+      url: siteUrl,
+      jobTitle: "GovTech & Full-Stack Solutions Developer",
+      worksFor: {
+        "@type": "GovernmentOrganization",
+        name: "Kementerian Ketenagakerjaan Republik Indonesia (Kemnaker)",
+      },
+      sameAs: [
+        "https://github.com/trionohidayat",
+        "https://www.linkedin.com/in/triono-hidayat",
+        "https://youtube.com/@trionohidayat",
+      ],
+      knowsAbout: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "n8n Workflow Automation",
+        "Android Native Development",
+        "RFID HF/UHF",
+        "Warehouse Management Systems",
+        "IT Systems Governance",
+      ],
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${siteUrl}/#service`,
+      name: "Triono Hidayat - Technical Solutions & Consulting",
+      url: siteUrl,
+      priceRange: "$$",
+      areaServed: "Worldwide",
+      founder: { "@id": `${siteUrl}/#person` },
+      description:
+        "Full-stack web development, native Android solutions, and n8n automated workflow pipelines.",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -56,8 +107,15 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${geistMono.variable} dark scroll-smooth`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen bg-[#090a0f] text-zinc-100 antialiased selection:bg-blue-600 selection:text-white">
         {children}
+        <Analytics />
       </body>
     </html>
   );
