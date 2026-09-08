@@ -10,7 +10,7 @@ export const Experience = () => {
 
   return (
     <section id="experience" className="py-16 sm:py-24 px-3 sm:px-6 relative bg-zinc-950/40 border-t border-white/5 overflow-hidden isolate w-full max-w-full">
-      <div className="max-w-4xl mx-auto w-full max-w-full">
+      <div className="max-w-4xl mx-auto w-full">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium text-amber-400 bg-amber-500/10 border border-amber-500/20 mb-3">

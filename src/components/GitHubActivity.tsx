@@ -78,7 +78,7 @@ export const GitHubActivity = () => {
 
   return (
     <section id="github" className="py-16 sm:py-24 px-4 sm:px-6 relative overflow-hidden isolate w-full max-w-full">
-      <div className="max-w-6xl mx-auto w-full max-w-full">
+      <div className="max-w-6xl mx-auto w-full">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 mb-3 shadow-xs shadow-emerald-500/10">

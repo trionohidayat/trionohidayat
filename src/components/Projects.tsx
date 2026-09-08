@@ -43,7 +43,7 @@ export const Projects = () => {
 
   return (
     <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6 relative bg-zinc-950/40 border-y border-white/5 overflow-hidden isolate w-full max-w-full">
-      <div className="max-w-6xl mx-auto w-full max-w-full">
+      <div className="max-w-6xl mx-auto w-full">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 mb-3">

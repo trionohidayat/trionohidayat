@@ -13,7 +13,7 @@ export const Footer = () => {
 
   return (
     <footer className="py-10 sm:py-12 px-4 sm:px-6 border-t border-white/5 relative bg-zinc-950 overflow-hidden isolate w-full max-w-full">
-      <div className="max-w-6xl mx-auto w-full max-w-full flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Brand & Tagline */}
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-lg bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
