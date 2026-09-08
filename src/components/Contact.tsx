@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 import { motion } from 'motion/react';
 import {
   Mail,
@@ -9,8 +8,6 @@ import {
   ArrowUpRight,
   Copy,
   Check,
-  Download,
-  FileText,
   Send,
   Sparkles,
 } from 'lucide-react';
@@ -18,7 +15,7 @@ import { LinkedInIcon, YouTubeIcon, GitHubIcon } from '@/components/Icons';
 import { portfolioData } from '@/data/portfolio';
 
 export const Contact = () => {
-  const { contacts, personal } = portfolioData;
+  const { contacts } = portfolioData;
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
@@ -120,58 +117,48 @@ export const Contact = () => {
           </motion.div>
         </div>
 
-        {/* View Resume & Social Channels Strip */}
+        {/* Engineering Profiles & Social Channels Strip */}
         <div className="glass-panel rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-zinc-900 border border-white/10 flex items-center justify-center text-blue-400 shrink-0">
-              <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <div>
-              <div className="text-sm font-bold text-white">Curriculum Vitae / Resume</div>
-              <div className="text-[11px] sm:text-xs text-zinc-400">ATS-friendly layout &bull; View, print, or PDF</div>
+              <div className="text-sm font-bold text-white">Engineering Profiles &amp; Open Source</div>
+              <div className="text-[11px] sm:text-xs text-zinc-400">Verified credentials &bull; GitHub repositories &bull; Professional network</div>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
-            <Link
-              href="/resume"
-              className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-semibold border border-white/10 transition-all cursor-pointer active:scale-[0.98] min-h-[44px]"
+          <div className="flex items-center justify-end gap-2.5">
+            <a
+              href={contacts.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3.5 py-2 rounded-xl bg-zinc-900 hover:text-blue-400 hover:bg-zinc-800 border border-white/10 text-zinc-300 transition-all flex items-center gap-2 text-xs font-medium active:scale-95"
+              title="LinkedIn Profile"
             >
-              <FileText className="w-3.5 h-3.5 text-blue-400" />
-              <span>View Resume</span>
-            </Link>
-
-            <div className="h-6 w-px bg-white/10 hidden sm:block" />
-
-            <div className="flex items-center justify-center gap-2 pt-1 sm:pt-0">
-              <a
-                href={contacts.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 sm:flex-none p-2.5 rounded-xl bg-zinc-900 hover:text-blue-400 border border-white/10 text-zinc-400 transition-colors flex items-center justify-center active:scale-95"
-                title="LinkedIn"
-              >
-                <LinkedInIcon className="w-4 h-4" />
-              </a>
-              <a
-                href={contacts.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 sm:flex-none p-2.5 rounded-xl bg-zinc-900 hover:text-white border border-white/10 text-zinc-400 transition-colors flex items-center justify-center active:scale-95"
-                title="GitHub"
-              >
-                <GitHubIcon className="w-4 h-4" />
-              </a>
-              <a
-                href={contacts.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 sm:flex-none p-2.5 rounded-xl bg-zinc-900 hover:text-red-400 border border-white/10 text-zinc-400 transition-colors flex items-center justify-center active:scale-95"
-                title="YouTube"
-              >
-                <YouTubeIcon className="w-4 h-4" />
-              </a>
-            </div>
+              <LinkedInIcon className="w-4 h-4" />
+              <span>LinkedIn</span>
+            </a>
+            <a
+              href={contacts.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3.5 py-2 rounded-xl bg-zinc-900 hover:text-white hover:bg-zinc-800 border border-white/10 text-zinc-300 transition-all flex items-center gap-2 text-xs font-medium active:scale-95"
+              title="GitHub Repositories"
+            >
+              <GitHubIcon className="w-4 h-4" />
+              <span>GitHub</span>
+            </a>
+            <a
+              href={contacts.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 rounded-xl bg-zinc-900 hover:text-red-400 hover:bg-zinc-800 border border-white/10 text-zinc-400 transition-all flex items-center justify-center active:scale-95"
+              title="YouTube"
+            >
+              <YouTubeIcon className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </div>

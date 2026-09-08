@@ -2,12 +2,10 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'motion/react';
 import {
   ArrowRight,
   Download,
-  FileText,
   Mail,
   Sparkles,
   CheckCircle2,
@@ -120,14 +118,6 @@ export const Hero = () => {
                 <Sparkles className="w-4 h-4 text-emerald-400" />
                 <span>WhatsApp Consultation</span>
               </a>
-
-              <Link
-                href="/resume"
-                className="flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/10 text-sm font-medium transition-all min-h-[44px]"
-              >
-                <FileText className="w-4 h-4 text-blue-400" />
-                <span>View Resume</span>
-              </Link>
             </motion.div>
 
             {/* Social Proof Strip */}
