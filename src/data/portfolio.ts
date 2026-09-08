@@ -77,7 +77,7 @@ export const portfolioData = {
     whatsappNumber: "+62 877-8808-4441",
     linkedin: "https://www.linkedin.com/in/triono-hidayat",
     github: "https://github.com/trionohidayat",
-    youtube: "https://youtube.com/@trionohidayat",
+    youtube: "https://youtube.com/@triono.hidayat",
   },
 
   services: [

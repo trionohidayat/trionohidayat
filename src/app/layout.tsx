@@ -76,7 +76,7 @@ const jsonLd = {
       sameAs: [
         "https://github.com/trionohidayat",
         "https://www.linkedin.com/in/triono-hidayat",
-        "https://youtube.com/@trionohidayat",
+        "https://youtube.com/@triono.hidayat",
       ],
       knowsAbout: [
         "Next.js",
