@@ -46,6 +46,8 @@ export interface CertificationItem {
   title: string;
   issuer: string;
   year: string;
+  credentialId?: string;
+  category: 'ai' | 'cloud' | 'mobile' | 'web' | 'engineering' | 'leadership';
 }
 
 export const portfolioData = {
@@ -61,6 +63,7 @@ export const portfolioData = {
     status: "Available for Remote Freelance & Contract Projects",
     location: "Jakarta, Indonesia (UTC+7) • Working Worldwide",
     avatarUrl: "/profile.png",
+    resumeUrl: "/resume_triono-hidayat.pdf",
     yearsOfExperience: "8+",
     completedProjects: "25+",
     hoursAutomated: "2,000+",
@@ -324,6 +327,18 @@ export const portfolioData = {
       ],
       tags: ["WordPress", "CDN", "Caching Optimization", "Web Security", "Backup & Recovery"],
     },
+    {
+      period: "Juli 2015 – September 2015",
+      role: "IT Support & Network Technician (Magang)",
+      organization: "Kantor Camat Tanjung Pandan",
+      location: "Belitung, Kepulauan Bangka Belitung, Indonesia",
+      description: [
+        "Merancang dan membangun infrastruktur jaringan lokal (LAN & Wi-Fi) di lingkungan kantor camat untuk menunjang kelancaran koneksi internet dan koordinasi kerja aparatur pemerintah.",
+        "Melakukan instalasi dan konfigurasi perangkat keras jaringan (router, switch, access point), penarikan dan crimping kabel UTP RJ45, serta pengelolaan alokasi IP address.",
+        "Memberikan layanan IT Support harian, perbaikan dan pemeliharaan perangkat komputer (PC/laptop, printer), serta troubleshooting sistem operasi dan aplikasi perkantoran.",
+      ],
+      tags: ["IT Support", "Network Infrastructure", "LAN / Wi-Fi Setup", "Hardware & Troubleshooting", "Router & Switch Configuration"],
+    },
   ] as ExperienceItem[],
 
   education: [
@@ -346,35 +361,299 @@ export const portfolioData = {
   ] as EducationItem[],
 
   certifications: [
+    // 2026 - AI & Cloud Specializations
     {
-      title: "Oracle Java Programming",
-      issuer: "Oracle Academy",
-      year: "Certified",
+      title: "DIGDAYA Practitioner Phase",
+      issuer: "LPPI (Lembaga Pengembangan Perbankan Indonesia)",
+      year: "Agu 2026",
+      credentialId: "efc242ec-4b01-41f4-a13c-db603b2aeddd",
+      category: "leadership",
+    },
+    {
+      title: "Belajar Penerapan Machine Learning dengan Google Cloud",
+      issuer: "Dicoding Indonesia",
+      year: "Agu 2026",
+      credentialId: "6RPN7MD9SX2M",
+      category: "ai",
+    },
+    {
+      title: "Deploy Multi-Agent Architectures",
+      issuer: "Google",
+      year: "Jul 2026",
+      category: "ai",
+    },
+    {
+      title: "Engineer AI Agents with Agent Development Kit (ADK)",
+      issuer: "Google",
+      year: "Jul 2026",
+      category: "ai",
+    },
+    {
+      title: "Orchestrate Multi-agent Workflows with Gemini Enterprise",
+      issuer: "Google",
+      year: "Jul 2026",
+      category: "ai",
+    },
+    {
+      title: "Create Your First Gemini Enterprise Application",
+      issuer: "Google",
+      year: "Jul 2026",
+      category: "ai",
+    },
+    {
+      title: "Belajar Fundamental Deep Learning",
+      issuer: "Dicoding Indonesia",
+      year: "Jul 2026",
+      credentialId: "81P2004OZOY",
+      category: "ai",
     },
     {
       title: "Belajar Fundamental Generative AI",
-      issuer: "Dicoding Indonesia / Google",
-      year: "Certified",
+      issuer: "Dicoding Indonesia",
+      year: "Jul 2026",
+      credentialId: "L4PQ9NWJ7P01",
+      category: "ai",
+    },
+    {
+      title: "Belajar Penerapan Machine Learning untuk Flutter",
+      issuer: "Dicoding Indonesia",
+      year: "Jul 2026",
+      credentialId: "0LZOYLLJQJX65",
+      category: "ai",
+    },
+    {
+      title: "Membangun Sistem Machine Learning",
+      issuer: "Dicoding Indonesia",
+      year: "Jul 2026",
+      credentialId: "JLX1VM90JZ72",
+      category: "ai",
+    },
+    {
+      title: "Pengembangan Generative AI berbasis LLM",
+      issuer: "Dicoding Indonesia",
+      year: "Jul 2026",
+      credentialId: "72ZD/1E7Q2YW",
+      category: "ai",
+    },
+    {
+      title: "Belajar Back-End Pemula dengan Python",
+      issuer: "Dicoding Indonesia",
+      year: "Jun 2026",
+      credentialId: "OLZOYM5KNX65",
+      category: "web",
+    },
+    {
+      title: "Belajar Dasar Cloud dan Gen AI di AWS",
+      issuer: "Dicoding Indonesia",
+      year: "Jun 2026",
+      credentialId: "RVZK03LKNZD5",
+      category: "cloud",
+    },
+    {
+      title: "Belajar Dasar Data Science",
+      issuer: "Dicoding Indonesia",
+      year: "Jun 2026",
+      credentialId: "81P2OMDVNZOY",
+      category: "ai",
+    },
+    {
+      title: "Belajar Dasar Manajemen Proyek",
+      issuer: "Dicoding Indonesia",
+      year: "Jun 2026",
+      credentialId: "0LZ0Y79QQX65",
+      category: "leadership",
+    },
+    {
+      title: "Belajar Dasar Pemrograman JavaScript",
+      issuer: "Dicoding Indonesia",
+      year: "Jun 2026",
+      credentialId: "NVP7ND884ZR0",
+      category: "web",
+    },
+    {
+      title: "Belajar Dasar Pemrograman Web",
+      issuer: "Dicoding Indonesia",
+      year: "Jun 2026",
+      credentialId: "98XW0N56WXM3",
+      category: "web",
+    },
+    {
+      title: "Belajar Fundamental Pemrosesan Data",
+      issuer: "Dicoding Indonesia",
+      year: "Jun 2026",
+      credentialId: "ERZRL80VQZYV",
+      category: "ai",
+    },
+    {
+      title: "Belajar Machine Learning untuk Pemula",
+      issuer: "Dicoding Indonesia",
+      year: "Jun 2026",
+      credentialId: "MRZMWJ5LKPYQ",
+      category: "ai",
+    },
+    {
+      title: "Belajar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud",
+      issuer: "Dicoding Indonesia",
+      year: "Jun 2026",
+      credentialId: "JMZVOBODRXN9",
+      category: "cloud",
+    },
+    {
+      title: "Belajar Penerapan AI di Aplikasi Web",
+      issuer: "Dicoding Indonesia",
+      year: "Jun 2026",
+      credentialId: "KEXLQK97RPG2",
+      category: "ai",
+    },
+    {
+      title: "Belajar Prinsip Pemrograman SOLID",
+      issuer: "Dicoding Indonesia",
+      year: "Jun 2026",
+      credentialId: "1GP8R3M38ZQK",
+      category: "engineering",
+    },
+    {
+      title: "Memulai Pemrograman Dengan Java",
+      issuer: "Dicoding Indonesia",
+      year: "Jun 2026",
+      credentialId: "EYX4QLM/WPDL",
+      category: "engineering",
+    },
+    {
+      title: "Belajar Dasar Google Cloud",
+      issuer: "Dicoding Indonesia",
+      year: "Mei 2026",
+      credentialId: "1GP8RJJOVzQK",
+      category: "cloud",
+    },
+    {
+      title: "Belajar Dasar UX Design",
+      issuer: "Dicoding Indonesia",
+      year: "Mei 2026",
+      credentialId: "JMZVO053JXN9",
+      category: "leadership",
+    },
+    {
+      title: "Prompt Engineering untuk Software Developer",
+      issuer: "Dicoding Indonesia",
+      year: "Mei 2026",
+      credentialId: "NVP7NJLOWZR0",
+      category: "ai",
+    },
+    {
+      title: "Belajar Penggunaan Generative AI",
+      issuer: "Dicoding Indonesia",
+      year: "Apr 2026",
+      credentialId: "EYX4QJ295PDL",
+      category: "ai",
+    },
+    {
+      title: "Spec-Driven Development dengan Kiro",
+      issuer: "Dicoding Indonesia",
+      year: "Apr 2026",
+      credentialId: "OLZOY4LW3X65",
+      category: "engineering",
+    },
+    {
+      title: "AI Praktis untuk Produktivitas",
+      issuer: "Dicoding Indonesia",
+      year: "Mar 2026",
+      credentialId: "0LZOY9VG3X65",
+      category: "ai",
+    },
+    {
+      title: "Belajar Membuat Front-End Web untuk Pemula",
+      issuer: "Dicoding Indonesia",
+      year: "Mar 2026",
+      credentialId: "NVP7N80YVZRO",
+      category: "web",
+    },
+
+    // 2023 - Cloud & Backend Foundational
+    {
+      title: "Belajar Membuat Aplikasi Back-End untuk Pemula",
+      issuer: "Dicoding Academy",
+      year: "Mar 2023",
+      credentialId: "JMZVNW5V3PN9",
+      category: "web",
+    },
+    {
+      title: "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)",
+      issuer: "Dicoding Academy",
+      year: "Feb 2023",
+      credentialId: "QLZ92GGGEX5D",
+      category: "cloud",
+    },
+
+    // 2020 - Mobile, Java & System Fundamentals
+    {
+      title: "Public Speaking",
+      issuer: "Luarsekolah",
+      year: "Des 2020",
+      category: "leadership",
+    },
+    {
+      title: "Dasar-dasar Mobile Programming Android dan Kotlin untuk Pemula",
+      issuer: "Skill Academy by Ruangguru",
+      year: "Okt 2020",
+      category: "mobile",
+    },
+    {
+      title: "Mastering Mobile Programming Android",
+      issuer: "Skill Academy by Ruangguru",
+      year: "Okt 2020",
+      category: "mobile",
+    },
+    {
+      title: "Memulai Pemrograman Dengan Python",
+      issuer: "Dicoding Academy",
+      year: "Okt 2020",
+      category: "web",
+    },
+    {
+      title: "Oracle Java Fundamentals",
+      issuer: "Oracle",
+      year: "Okt 2020",
+      category: "engineering",
+    },
+    {
+      title: "Oracle Java Programming",
+      issuer: "Oracle",
+      year: "Okt 2020",
+      category: "engineering",
+    },
+    {
+      title: "Belajar Dasar Pemrograman Web",
+      issuer: "Dicoding Academy",
+      year: "Sep 2020",
+      category: "web",
+    },
+
+    // 2019 - Android & IoT Foundation
+    {
+      title: "Memulai Pemrograman Dengan Kotlin",
+      issuer: "Dicoding Academy",
+      year: "Sep 2019",
+      category: "mobile",
     },
     {
       title: "Internet of Things (IoT)",
-      issuer: "Professional Certification",
-      year: "Certified",
+      issuer: "Digital Talent Scholarship (Kominfo)",
+      year: "Agu 2019",
+      category: "mobile",
     },
     {
-      title: "Dasar-dasar Mobile Programming",
-      issuer: "Dicoding Indonesia",
-      year: "Certified",
+      title: "Kotlin from Zero to Hero - Bahasa Indonesia",
+      issuer: "Udacoding",
+      year: "Jun 2019",
+      credentialId: "UC-RG94E4FA",
+      category: "mobile",
     },
     {
-      title: "Android dan Kotlin untuk Pemula",
-      issuer: "Dicoding Indonesia",
-      year: "Certified",
-    },
-    {
-      title: "Kotlin from Zero to Hero",
-      issuer: "Udemy / Tech Academy",
-      year: "Certified",
+      title: "Belajar Membuat Aplikasi Android untuk Pemula",
+      issuer: "Dicoding Academy",
+      year: "Agu 2019",
+      category: "mobile",
     },
   ] as CertificationItem[],
 };

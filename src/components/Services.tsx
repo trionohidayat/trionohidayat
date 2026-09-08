@@ -23,23 +23,23 @@ export const Services = () => {
   const { services, contacts } = portfolioData;
 
   return (
-    <section id="services" className="py-24 px-4 sm:px-6 relative">
-      <div className="max-w-6xl mx-auto">
+    <section id="services" className="py-16 sm:py-24 px-4 sm:px-6 relative overflow-hidden isolate w-full max-w-full">
+      <div className="max-w-6xl mx-auto w-full max-w-full">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 mb-3">
             <span>WHAT I DO</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
             Specialized Services & Offerings
           </h2>
-          <p className="mt-4 text-zinc-400 text-sm sm:text-base leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-zinc-400 text-xs sm:text-base leading-relaxed">
             High-impact technical capabilities designed to solve operational bottlenecks, accelerate product launches, and automate manual tasks.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {services.map((service: Service, idx: number) => (
             <motion.div
               key={service.id}
@@ -47,7 +47,7 @@ export const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="glass-panel rounded-2xl p-6 sm:p-8 flex flex-col justify-between group hover:border-white/20 transition-all duration-300 relative overflow-hidden"
+              className="glass-panel rounded-2xl p-5 sm:p-8 flex flex-col justify-between group hover:border-white/20 transition-all duration-300 relative overflow-hidden"
             >
               {/* Subtle Corner Glow on Hover */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/10 transition-colors pointer-events-none" />

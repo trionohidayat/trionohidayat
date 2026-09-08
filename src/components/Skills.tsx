@@ -24,23 +24,23 @@ export const Skills = () => {
   const { skills } = portfolioData;
 
   return (
-    <section id="skills" className="py-24 px-4 sm:px-6 relative">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6 relative overflow-hidden isolate w-full max-w-full">
+      <div className="max-w-6xl mx-auto w-full max-w-full">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium text-purple-400 bg-purple-500/10 border border-purple-500/20 mb-3">
             <span>TECHNICAL PROFICIENCY</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
             Tools, Technologies & Methods
           </h2>
-          <p className="mt-4 text-zinc-400 text-sm sm:text-base leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-zinc-400 text-xs sm:text-base leading-relaxed">
             A comprehensive, battle-tested stack spanning modern web ecosystems, native Android, and automated workflow pipelines.
           </p>
         </div>
 
         {/* Skill Category Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {skills.map((cat: SkillCategory, idx: number) => (
             <motion.div
               key={cat.name}
@@ -48,7 +48,7 @@ export const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className={`glass-panel rounded-2xl p-6 flex flex-col justify-between hover:border-white/20 transition-all duration-300 ${
+              className={`glass-panel rounded-2xl p-5 sm:p-6 flex flex-col justify-between hover:border-white/20 transition-all duration-300 ${
                 idx === skills.length - 1 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
             >

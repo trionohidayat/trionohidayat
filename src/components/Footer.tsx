@@ -12,8 +12,8 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="py-12 px-4 sm:px-6 border-t border-white/5 relative bg-zinc-950">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <footer className="py-10 sm:py-12 px-4 sm:px-6 border-t border-white/5 relative bg-zinc-950 overflow-hidden isolate w-full max-w-full">
+      <div className="max-w-6xl mx-auto w-full max-w-full flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Brand & Tagline */}
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-lg bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
@@ -24,7 +24,7 @@ export const Footer = () => {
               {portfolioData.personal.name}
             </div>
             <div className="text-xs text-zinc-400">
-              Enterprise Systems Governance & Solutions Engineering
+              Enterprise Systems Governance &amp; Solutions Engineering
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ export const Footer = () => {
           </span>
           <button
             onClick={scrollToTop}
-            className="p-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white border border-white/10 transition-colors"
+            className="p-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white border border-white/10 transition-colors active:scale-95 cursor-pointer"
             title="Scroll to top"
             aria-label="Scroll to top"
           >

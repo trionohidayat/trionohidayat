@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triono Hidayat - Resume</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 12mm 15mm 12mm 15mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1a1a1a;
+      background-color: #ffffff;
+      line-height: 1.45;
+      font-size: 9.6pt;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .name {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .title {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #2563eb;
+      margin-top: 4px;
+      letter-spacing: -0.2px;
+    }
+
+    .contact-bar {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 8.8pt;
+      color: #475569;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .contact-item a {
+      color: #334155;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+
+    .separator {
+      color: #cbd5e1;
+    }
+
+    /* Section Structure */
+    section {
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 10.2pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #0f172a;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    /* Summary */
+    .summary {
+      font-size: 9.2pt;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.45;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      row-gap: 4px;
+      column-gap: 10px;
+      font-size: 8.9pt;
+    }
+
+    .skill-category {
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    .skill-list {
+      color: #334155;
+    }
+
+    /* Experience & Projects */
+    .entry {
+      margin-bottom: 9px;
+      page-break-inside: avoid;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .entry-role {
+      font-size: 9.6pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .entry-company {
+      font-size: 9.2pt;
+      font-weight: 600;
+      color: #2563eb;
+    }
+
+    .entry-date {
+      font-size: 8.6pt;
+      font-weight: 600;
+      color: #64748b;
+      white-space: nowrap;
+    }
+
+    .entry-location {
+      font-size: 8.5pt;
+      color: #64748b;
+      font-style: italic;
+    }
+
+    ul.bullets {
+      margin-top: 3px;
+      padding-left: 15px;
+    }
+
+    ul.bullets li {
+      font-size: 8.9pt;
+      color: #334155;
+      margin-bottom: 2px;
+      line-height: 1.4;
+    }
+
+    ul.bullets li strong {
+      color: #0f172a;
+    }
+
+    /* Education & Certifications */
+    .edu-cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .cert-item {
+      font-size: 8.8pt;
+      margin-bottom: 3px;
+      color: #334155;
+    }
+
+    .cert-item strong {
+      color: #0f172a;
+    }
+
+    /* Print Controls for Web Viewing */
+    .no-print {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding: 12px 16px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      font-size: 9pt;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: #334155;
+      border-color: #cbd5e1;
+    }
+
+    .btn-secondary:hover {
+      background: #f1f5f9;
+    }
+
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: transparent;
+      }
+      .container {
+        max-width: 100%;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Web toolbar (hidden in print) -->
+    <div class="no-print">
+      <a href="/" class="btn btn-secondary">&larr; Back to Portfolio</a>
+      <button onclick="window.print()" class="btn btn-primary">Print / Save as PDF</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div class="name">Triono Hidayat</div>
+      <div class="title">Full-Stack &amp; Solutions Developer | GovTech Systems Officer | AI &amp; Workflow Automation</div>
+      <div class="contact-bar">
+        <span class="contact-item">Jakarta, Indonesia (UTC+7) &bull; Open for Worldwide Remote</span>
+        <span class="separator">|</span>
+        <span class="contact-item"><a href="mailto:trionohidayat3@gmail.com">trionohidayat3@gmail.com</a></span>
+        <span class="separator">|</span>
+        <span class="contact-item"><a href="https://wa.me/6287788084441">+62 877-8808-4441</a></span>
+        <span class="separator">|</span>
+        <span class="contact-item"><a href="https://linkedin.com/in/triono-hidayat" target="_blank">linkedin.com/in/triono-hidayat</a></span>
+        <span class="separator">|</span>
+        <span class="contact-item"><a href="https://github.com/trionohidayat" target="_blank">github.com/trionohidayat</a></span>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary">
+        Versatile <strong>Full-Stack &amp; Solutions Developer</strong> and <strong>IT Systems Officer</strong> with 8+ years of cross-industry engineering experience spanning public-sector GovTech standards, enterprise RFID / WMS logistics architecture, and modern web &amp; native mobile applications. Proven track record leading software departments, delivering 10+ national-scale tender initiatives, architecting resilient <strong>n8n AI workflow pipelines</strong>, and developing scalable applications using <strong>Next.js 16, TypeScript, React 19, Kotlin, and Android Native</strong>. Adept at bridging technical implementation with high-level stakeholder management.
+      </p>
+    </section>
+
+    <!-- Core Technical Competencies -->
+    <section>
+      <h2 class="section-title">Core Technical Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-category">Full-Stack &amp; Web</div>
+        <div class="skill-list">TypeScript, Next.js 16 (App Router), React 19, Tailwind CSS v4, Node.js, Prisma ORM, RESTful APIs, SSR/SSG</div>
+
+        <div class="skill-category">Mobile &amp; Embedded</div>
+        <div class="skill-list">Android Native (Kotlin &amp; Java), MVVM &amp; Repository Pattern, Room DB (SQLite), RFID (HF/UHF SDKs), Barcode Scanners, NFC</div>
+
+        <div class="skill-category">Automation &amp; AI</div>
+        <div class="skill-list">n8n (Self-Hosted &amp; Cloud), AI Agent Workflows, Multi-Service Webhooks, REST API Pipelines, Python Automation</div>
+
+        <div class="skill-category">Databases &amp; DevOps</div>
+        <div class="skill-list">PostgreSQL, MySQL, Redis Caching, Docker, Linux VPS, Git / GitHub, CDN &amp; Performance Optimization</div>
+
+        <div class="skill-category">Systems &amp; Leadership</div>
+        <div class="skill-list">GovTech IT Systems Governance, IT Project Management (Agile/Scrum, Jira), WMS Architecture, Technical SOPs &amp; Tender Bids</div>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section>
+      <h2 class="section-title">Professional Experience</h2>
+
+      <!-- Kemnaker -->
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-role">Penata Kelola Sistem dan Teknologi Informasi (IT Systems Officer)</span>
+            <span class="entry-company"> &bull; Kementerian Ketenagakerjaan Republik Indonesia (Kemnaker)</span>
+          </div>
+          <span class="entry-date">May 2025 – Present</span>
+        </div>
+        <div class="entry-location">South Jakarta, Indonesia &bull; Directorate of Binapenta &amp; PKK</div>
+        <ul class="bullets">
+          <li>Direct internal information systems governance supporting strategic national employment expansion initiatives across directorate work units.</li>
+          <li>Pioneer process digitalization and workflow automation pipelines utilizing <strong>n8n</strong> and REST APIs to eliminate inter-directorate communication bottlenecks.</li>
+          <li>Author enterprise technical documentation, digital system SOPs, and governance frameworks ensuring operational data integrity and public-sector cybersecurity compliance.</li>
+          <li>Spearhead cross-platform data mapping, automated report aggregation, and real-time synchronization feeds with central government databases.</li>
+        </ul>
+      </div>
+
+      <!-- WDS Project Manager -->
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-role">Remote Project Manager (Freelance / Contract)</span>
+            <span class="entry-company"> &bull; PT Wahana Datarindo Sempurna</span>
+          </div>
+          <span class="entry-date">June 2025 – Nov 2025</span>
+        </div>
+        <div class="entry-location">South Jakarta, Indonesia (Remote)</div>
+        <ul class="bullets">
+          <li>Directed end-to-end execution of enterprise Warehouse Management Systems (WMS) and RFID-based software infrastructure.</li>
+          <li>Served as chief technical liaison aligning corporate stakeholders, distributed software engineering squads, and international hardware vendors.</li>
+          <li>Orchestrated sprint cadence and deliverable tracking via Agile/Scrum methodologies using Jira and Trello, achieving 100% milestone on-time delivery.</li>
+        </ul>
+      </div>
+
+      <!-- WDS Head Software -->
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-role">Head of Software Department</span>
+            <span class="entry-company"> &bull; PT Wahana Datarindo Sempurna</span>
+          </div>
+          <span class="entry-date">June 2023 – June 2025</span>
+        </div>
+        <div class="entry-location">South Jakarta, Indonesia</div>
+        <ul class="bullets">
+          <li>Led the software engineering department overseeing product discovery, presales architecture, Proof-of-Concept (PoC) builds, and post-deployment SLAs.</li>
+          <li>Successfully led technical architecture and administrative proposals for <strong>10+ national-scale enterprise tenders</strong> in RFID asset tracking and logistics.</li>
+          <li>Engineered full lifecycle hardware-software integration bridging industrial RFID readers (HF/UHF) with backend databases and custom client software.</li>
+        </ul>
+      </div>
+
+      <!-- WDS Android Developer -->
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-role">Android Developer</span>
+            <span class="entry-company"> &bull; PT Wahana Datarindo Sempurna</span>
+          </div>
+          <span class="entry-date">July 2022 – June 2023</span>
+        </div>
+        <div class="entry-location">South Jakarta, Indonesia</div>
+        <ul class="bullets">
+          <li>Developed native Android WMS applications integrated with RFID HF/UHF and handheld laser barcode scanners via vendor SDKs.</li>
+          <li>Implemented resilient offline-first architecture with local <strong>Room Database (SQLite)</strong> and background sync via RESTful APIs.</li>
+          <li>Architected codebase adhering to MVVM and Repository patterns, reducing crash rates and streamlining on-site warehouse deployments.</li>
+        </ul>
+      </div>
+
+      <!-- SAP Express -->
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-role">Android Developer</span>
+            <span class="entry-company"> &bull; PT Satria Antaran Prima Tbk. (SAP Express)</span>
+          </div>
+          <span class="entry-date">Jan 2022 – June 2022</span>
+        </div>
+        <div class="entry-location">DKI Jakarta, Indonesia</div>
+        <ul class="bullets">
+          <li>Engineered mission-critical native Android applications for Digital Wallet, real-time Package Tracking, and courier logistics operations.</li>
+          <li>Implemented hardened security mechanisms, session tokens, and cryptographic verification for financial digital wallet transactions.</li>
+          <li>Integrated courier devices with central payment gateways and dispatch management APIs across nationwide hubs.</li>
+        </ul>
+      </div>
+
+      <!-- Spekta Cipta Interusa -->
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-role">Full-Stack &amp; Web Developer</span>
+            <span class="entry-company"> &bull; PT Spekta Cipta Interusa</span>
+          </div>
+          <span class="entry-date">March 2020 – Oct 2021</span>
+        </div>
+        <div class="entry-location">Belitung / Remote, Indonesia</div>
+        <ul class="bullets">
+          <li>Engineered custom web platforms, deploying CDN edge caching, and fine-tuning server load times for sub-second latency.</li>
+          <li>Implemented secure user authentication, role-based access control (RBAC), and automated disaster recovery backup pipelines.</li>
+        </ul>
+      </div>
+
+      <!-- Kantor Camat Tanjung Pandan -->
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-role">IT Support &amp; Network Technician (Internship)</span>
+            <span class="entry-company"> &bull; Kantor Camat Tanjung Pandan</span>
+          </div>
+          <span class="entry-date">July 2015 – Sept 2015</span>
+        </div>
+        <div class="entry-location">Belitung, Bangka Belitung, Indonesia</div>
+        <ul class="bullets">
+          <li>Designed and deployed local area network (LAN &amp; Wi-Fi) infrastructure across office work units, establishing stable internet connectivity for sub-district government operations.</li>
+          <li>Installed and configured network hardware including routers, access points, network switches, UTP cabling (crimping RJ45), and local IP distribution.</li>
+          <li>Provided front-line technical support, hardware troubleshooting (PCs, laptops, printers), and operating system maintenance for government personnel.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Key Featured Engineering Projects -->
+    <section>
+      <h2 class="section-title">Key Featured Engineering Projects</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-role">GovTech Process Digitization &amp; n8n Data Pipeline</span>
+            <span class="entry-company"> &bull; Workflow Automation &amp; AI</span>
+          </div>
+          <span class="entry-date">PostgreSQL &bull; n8n &bull; REST APIs &bull; Python</span>
+        </div>
+        <p class="summary" style="font-size: 8.8pt; margin-top: 2px;">
+          Built automated workflow pipelines eliminating administrative tracking lag across government employment expansion programs. Integrated automated data validation, inter-departmental notification feeds, and multi-directorate reporting.
+        </p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-role">Enterprise WMS &amp; RFID Asset Tracking Solution</span>
+            <span class="entry-company"> &bull; Systems &amp; Mobile</span>
+          </div>
+          <span class="entry-date">Android Kotlin &bull; RFID HF/UHF &bull; Room DB &bull; MVVM</span>
+        </div>
+        <p class="summary" style="font-size: 8.8pt; margin-top: 2px;">
+          Constructed an end-to-end WMS client application deployed across 10+ major national logistics tenders. Features real-time handheld UHF tag scanning, offline-first caching, and high-throughput server synchronization.
+        </p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="entry-role">Cloud Operations &amp; High-Throughput Platform</span>
+            <span class="entry-company"> &bull; Full-Stack Web</span>
+          </div>
+          <span class="entry-date">Next.js 16 &bull; TypeScript &bull; React 19 &bull; Prisma &bull; PostgreSQL</span>
+        </div>
+        <p class="summary" style="font-size: 8.8pt; margin-top: 2px;">
+          Designed a high-throughput management platform utilizing Next.js 16 App Router, Prisma ORM, and Tailwind CSS. Implemented edge caching, server actions, and type-safe database schemas with sub-second response times.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section>
+      <div class="edu-cert-grid">
+        <div>
+          <h2 class="section-title">Education</h2>
+          <div class="entry" style="margin-bottom: 6px;">
+            <div class="entry-role" style="font-size: 9.2pt;">Bachelor of Informatics Engineering (S.Kom)</div>
+            <div class="entry-company">STMIK Nusa Mandiri, Jakarta</div>
+            <div class="entry-date" style="font-size: 8.5pt;">2017 – 2019</div>
+          </div>
+          <div class="entry">
+            <div class="entry-role" style="font-size: 9.2pt;">Associate of Computer Engineering (A.Md.Kom)</div>
+            <div class="entry-company">Universitas Bina Sarana Informatika (BSI), Jakarta</div>
+            <div class="entry-date" style="font-size: 8.5pt;">2013 – 2016</div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="section-title">Professional Certifications (43+ Verified)</h2>
+          <div class="cert-item">&bull; <strong>Deploy Multi-Agent Architectures &amp; ADK</strong> &mdash; Google (2026)</div>
+          <div class="cert-item">&bull; <strong>DIGDAYA Practitioner Phase</strong> &mdash; LPPI (2026)</div>
+          <div class="cert-item">&bull; <strong>Fundamental Deep Learning &amp; Gen AI</strong> &mdash; Dicoding (2026)</div>
+          <div class="cert-item">&bull; <strong>Cloud Practitioner Essentials (AWS)</strong> &mdash; AWS / Dicoding</div>
+          <div class="cert-item">&bull; <strong>Oracle Java Programming</strong> &mdash; Oracle Academy</div>
+          <div class="cert-item">&bull; <strong>Internet of Things (IoT)</strong> &mdash; Digital Talent Scholarship</div>
+          <div class="cert-item" style="font-size: 8pt; color: #64748b; font-style: italic; margin-top: 3px;">&bull; + 37 additional verified credentials in AI, Cloud, Mobile &amp; Systems (viewable on web portfolio).</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
