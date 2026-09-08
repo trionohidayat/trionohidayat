@@ -28,7 +28,9 @@ export async function GET(request: NextRequest) {
     headers: {
       'Content-Type': 'application/pdf',
       'Content-Disposition': `${disposition}; filename="${fileName}"`,
-      'Cache-Control': 'public, max-age=3600',
+      'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0',
     },
   });
 }
