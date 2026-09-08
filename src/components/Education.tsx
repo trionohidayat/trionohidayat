@@ -242,8 +242,8 @@ export const Education = () => {
             </div>
 
             {/* Category Filter Pills: Swipeable Strip on Mobile */}
-            <div className="overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0 pb-1 w-full max-w-full min-w-0">
-              <div className="flex items-center gap-1.5 min-w-max">
+            <div className="overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0 w-full max-w-full min-w-0">
+              <div className="flex items-center gap-1.5 min-w-max py-2.5 px-1">
                 {CATEGORY_TABS.map((tab) => {
                   const count = categoryCounts[tab.key] || 0;
                   const isActive = activeCategory === tab.key;

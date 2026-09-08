@@ -147,7 +147,6 @@ export const portfolioData = {
       solution:
         "Implemented automated workflow pipelines using n8n and REST APIs to automate data validation, internal report aggregation, and cross-department notification feeds.",
       techStack: ["n8n", "PostgreSQL", "REST API", "Webhooks", "GovTech", "Python"],
-      demoUrl: "https://demo.example.com/govtech",
       githubUrl: "https://github.com/trionohidayat",
     },
     {
@@ -161,7 +160,6 @@ export const portfolioData = {
       solution:
         "Engineered an end-to-end Warehouse Management System (WMS) integrating RFID (HF/UHF) hardware, handheld barcode scanners, and an Android client connected to central servers via MVVM & REST API.",
       techStack: ["Android (Kotlin)", "RFID HF/UHF", "Barcode SDK", "Room DB", "PostgreSQL", "MVVM"],
-      demoUrl: "https://demo.example.com/rfid-wms",
       githubUrl: "https://github.com/trionohidayat",
     },
     {
@@ -175,7 +173,6 @@ export const portfolioData = {
       solution:
         "Developed responsive native Android applications featuring robust digital wallet authentication, shipment tracking API integration, and barcode scanning modules.",
       techStack: ["Android (Java/Kotlin)", "Digital Wallet", "REST API", "Package Tracking", "Security"],
-      demoUrl: "https://demo.example.com/sap-express",
       githubUrl: "https://github.com/trionohidayat",
     },
     {
@@ -189,8 +186,49 @@ export const portfolioData = {
       solution:
         "Constructed a high-throughput full-stack web application leveraging Next.js 16, TypeScript, Prisma ORM, and PostgreSQL with CDN caching optimization.",
       techStack: ["Next.js 16", "TypeScript", "Prisma ORM", "PostgreSQL", "Tailwind CSS"],
-      demoUrl: "https://demo.example.com/cloud-platform",
       githubUrl: "https://github.com/trionohidayat",
+    },
+    {
+      id: "tok2tube-automation",
+      title: "Tok2Tube – Automated Video Ingestion & Repurposing Pipeline",
+      category: "automation",
+      categoryLabel: "Media Automation",
+      impact: "10x Faster Publishing Speed",
+      problem:
+        "Cross-posting and archiving short-form videos across creator platforms required hours of manual downloading, metadata conversion, and redundant upload tasks.",
+      solution:
+        "Architected an automated asynchronous pipeline leveraging Python, YouTube Data API v3, and media processing workers to extract, optimize, and distribute video assets automatically.",
+      techStack: ["Python", "YouTube API v3", "FastAPI", "AsyncIO", "FFmpeg", "Automation"],
+      demoUrl: "https://github.com/trionohidayat/tok2tube",
+      githubUrl: "https://github.com/trionohidayat/tok2tube",
+    },
+    {
+      id: "inset-ecosystem",
+      title: "Inset Ecosystem – Distributed Services & Event Integration",
+      category: "systems",
+      categoryLabel: "Distributed Architecture",
+      impact: "Fault-Tolerant Microservices",
+      problem:
+        "Enterprise platforms required decoupled service communications, reliable data synchronization, and resilient message routing across heterogeneous services.",
+      solution:
+        "Engineered a modular microservice ecosystem featuring event-driven architecture, centralized logging, and automated health reconciliation.",
+      techStack: ["TypeScript", "Node.js", "Docker", "Event-Driven", "REST APIs", "Redis"],
+      demoUrl: "https://github.com/trionohidayat/inset-ecosystem",
+      githubUrl: "https://github.com/trionohidayat/inset-ecosystem",
+    },
+    {
+      id: "mentorhub-platform",
+      title: "MentorHub – Collaborative Mentorship & Learning Platform",
+      category: "web",
+      categoryLabel: "Full-Stack Web",
+      impact: "Real-Time Scheduling & Booking",
+      problem:
+        "Independent developers and learners lacked an integrated workspace to book structured 1-on-1 mentoring sessions, track competency roadmaps, and review milestone progress.",
+      solution:
+        "Constructed a modern responsive web platform using Next.js, TypeScript, PostgreSQL, and Prisma ORM with automated calendar booking and notification flows.",
+      techStack: ["Next.js", "TypeScript", "React", "PostgreSQL", "Prisma ORM", "Tailwind CSS"],
+      demoUrl: "https://github.com/trionohidayat/mentorhub",
+      githubUrl: "https://github.com/trionohidayat/mentorhub",
     },
   ] as Project[],
 

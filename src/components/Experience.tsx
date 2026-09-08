@@ -20,7 +20,7 @@ export const Experience = () => {
             Professional Experience & Milestones
           </h2>
           <p className="mt-3 sm:mt-4 text-zinc-400 text-xs sm:text-base leading-relaxed">
-            Bridging institutional-scale systems governance, academic instruction in computer science, and modern full-stack development.
+            Bridging institutional-scale GovTech systems governance, enterprise RFID & WMS logistics, and modern full-stack application development.
           </p>
         </div>
 

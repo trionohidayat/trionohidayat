@@ -59,7 +59,7 @@ export const Projects = () => {
 
         {/* Category Filters: Horizontal Swipeable Strip on Mobile */}
         <div className="mb-8 sm:mb-12 -mx-4 px-4 sm:mx-0 sm:px-0 overflow-x-auto no-scrollbar w-full max-w-full min-w-0">
-          <div className="flex items-center justify-start sm:justify-center gap-2 min-w-max pb-1">
+          <div className="flex items-center justify-start sm:justify-center gap-2 min-w-max py-3 px-1">
             {categories.map((cat) => {
               const isActive = activeCategory === cat.id;
               return (
@@ -155,13 +155,14 @@ export const Projects = () => {
                   </button>
 
                   <a
-                    href={portfolioData.contacts.github}
+                    href={project.githubUrl || portfolioData.contacts.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-400 hover:text-zinc-200 transition-colors py-2 px-2.5"
+                    title={project.githubUrl ? "View Repository / Architecture" : "View GitHub Profile"}
                   >
                     <FolderGit2 className="w-4 h-4" />
-                    <span className="hidden xs:inline">Architecture</span>
+                    <span className="hidden xs:inline">{project.githubUrl && project.githubUrl !== portfolioData.contacts.github ? 'Codebase' : 'Architecture'}</span>
                   </a>
                 </div>
               </motion.div>
@@ -242,6 +243,18 @@ export const Projects = () => {
 
                 {/* Modal Footer / Actions */}
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 pt-4 border-t border-white/10 sticky bottom-0 bg-zinc-950/95 backdrop-blur-md -mb-1 pb-1">
+                  {modalProject.githubUrl && (
+                    <a
+                      href={modalProject.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 hover:text-white border border-white/10 hover:border-white/20 text-xs sm:text-sm font-semibold transition-all active:scale-95"
+                    >
+                      <FolderGit2 className="w-4 h-4 text-blue-400 shrink-0" />
+                      <span>{modalProject.githubUrl.includes('/trionohidayat/') ? 'View Codebase' : 'Architecture'}</span>
+                    </a>
+                  )}
+
                   <a
                     href={`https://wa.me/${portfolioData.contacts.whatsappRaw}?text=Hello%20Triono,%20I%20saw%20your%20${encodeURIComponent(modalProject.title)}%20project%20and%20want%20to%20build%20something%20similar.`}
                     target="_blank"
@@ -253,7 +266,7 @@ export const Projects = () => {
                   </a>
                   <button
                     onClick={() => setModalProject(null)}
-                    className="px-5 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-300 text-xs sm:text-sm font-medium border border-white/10 active:scale-95 transition-all cursor-pointer"
+                    className="px-4 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-300 text-xs sm:text-sm font-medium border border-white/10 active:scale-95 transition-all cursor-pointer"
                   >
                     Close
                   </button>

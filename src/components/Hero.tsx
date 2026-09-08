@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import {
   ArrowRight,
@@ -109,6 +110,14 @@ export const Hero = () => {
                 <ArrowRight className="w-4 h-4" />
               </a>
 
+              <Link
+                href="/resume"
+                className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 hover:text-white border border-white/10 hover:border-white/20 font-semibold text-sm transition-all active:scale-[0.98] min-h-[48px]"
+              >
+                <Download className="w-4 h-4 text-blue-400" />
+                <span>View CV / Resume</span>
+              </Link>
+
               <a
                 href={contacts.whatsappUrl}
                 target="_blank"
@@ -116,7 +125,7 @@ export const Hero = () => {
                 className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-emerald-950/40 hover:bg-emerald-900/50 text-emerald-300 border border-emerald-500/30 font-semibold text-sm transition-all active:scale-[0.98] min-h-[48px]"
               >
                 <Sparkles className="w-4 h-4 text-emerald-400" />
-                <span>WhatsApp Consultation</span>
+                <span>WhatsApp</span>
               </a>
             </motion.div>
 

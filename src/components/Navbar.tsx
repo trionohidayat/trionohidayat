@@ -47,6 +47,7 @@ export const Navbar = () => {
     { label: 'Projects', href: '#projects', icon: FolderGit2 },
     { label: 'Experience', href: '#experience', icon: History },
     { label: 'Credentials', href: '#education', icon: GraduationCap },
+    { label: 'Resume', href: '/resume', icon: FileText },
   ];
 
   return (

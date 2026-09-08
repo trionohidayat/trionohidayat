@@ -13,10 +13,14 @@ import {
 import { portfolioData, SkillCategory } from '@/data/portfolio';
 
 const categoryIcons: Record<string, React.ReactNode> = {
+  'Top & Full-Stack': <Code className="w-5 h-5 text-blue-400" />,
   'Frontend & Web': <Code className="w-5 h-5 text-blue-400" />,
-  'Automation & Backend': <Cpu className="w-5 h-5 text-emerald-400" />,
+  'Mobile & Embedded': <Smartphone className="w-5 h-5 text-purple-400" />,
   'Mobile Development': <Smartphone className="w-5 h-5 text-purple-400" />,
+  'Workflow & Automation': <Cpu className="w-5 h-5 text-emerald-400" />,
+  'Automation & Backend': <Cpu className="w-5 h-5 text-emerald-400" />,
   'Database, Cloud & DevOps': <Database className="w-5 h-5 text-cyan-400" />,
+  'Systems & Project Management': <ShieldCheck className="w-5 h-5 text-amber-400" />,
   'Systems Governance & Methods': <ShieldCheck className="w-5 h-5 text-amber-400" />,
 };
 

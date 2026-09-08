@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ArrowUp, Terminal } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowUp, Terminal, FileText } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 
 export const Footer = () => {
@@ -29,9 +30,25 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Middle Tech Tag */}
-        <div className="text-xs text-zinc-400 flex items-center gap-1.5 font-mono">
-          <span>Engineered with Next.js 16 &amp; Tailwind CSS</span>
+        {/* Middle Tech Tag & Resume Link */}
+        <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-zinc-400 font-mono">
+          <span>Next.js 16 &amp; Tailwind CSS</span>
+          <span className="text-zinc-600">&bull;</span>
+          <Link
+            href="/resume"
+            className="inline-flex items-center gap-1 text-zinc-300 hover:text-blue-400 transition-colors"
+          >
+            <FileText className="w-3.5 h-3.5" />
+            <span>Interactive Resume</span>
+          </Link>
+          <span className="text-zinc-600">&bull;</span>
+          <a
+            href="/download"
+            className="text-zinc-300 hover:text-emerald-400 transition-colors"
+            title="Download PDF"
+          >
+            Download PDF
+          </a>
         </div>
 
         {/* Right Info & Back to Top */}
