@@ -46,7 +46,6 @@ export const Navbar = () => {
   const navLinks = [
     { label: 'Services', href: '#services', icon: Layers },
     { label: 'Projects', href: '#projects', icon: FolderGit2 },
-    { label: 'Live Apps', href: '#deployments', icon: Radio },
     { label: 'Experience', href: '#experience', icon: History },
     { label: 'Credentials', href: '#education', icon: GraduationCap },
     { label: 'Resume', href: '/resume', icon: FileText },

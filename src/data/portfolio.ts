@@ -10,6 +10,8 @@ export interface Project {
   demoUrl?: string;
   githubUrl?: string;
   image?: string;
+  vercelSlug?: string;
+  isLive?: boolean;
 }
 
 export interface Service {
@@ -137,6 +139,114 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "tok2tube-automation",
+      title: "Tok2Tube – Video Ingestion & Multi-Platform Pipeline",
+      category: "automation",
+      categoryLabel: "Media Automation",
+      impact: "10x Faster Publishing Speed",
+      problem:
+        "Cross-posting and archiving short-form videos across creator platforms required hours of manual downloading, metadata conversion, and redundant upload tasks.",
+      solution:
+        "Architected an automated asynchronous pipeline leveraging Next.js, Python, YouTube Data API v3, and media processing workers to extract, optimize, and distribute video assets automatically.",
+      techStack: ["Next.js", "TypeScript", "Python", "YouTube API v3", "FastAPI", "Tailwind CSS"],
+      demoUrl: "https://tok2tube.vercel.app",
+      vercelSlug: "tok2tube",
+      isLive: true,
+      githubUrl: "https://github.com/trionohidayat/tok2tube",
+    },
+    {
+      id: "nusataway-platform",
+      title: "Nusataway – Island Tours & Travel Discovery Platform",
+      category: "web",
+      categoryLabel: "Travel & Tourism Tech",
+      impact: "Interactive Tour Booking & Discovery",
+      problem:
+        "Travelers in regional destinations struggled to discover curated tour packages, customized itineraries, and authentic local experiences with seamless digital booking.",
+      solution:
+        "Engineered a high-performance, mobile-first travel web application using Next.js with optimized PageSpeed, dynamic package filtering, and responsive booking inquiries.",
+      techStack: ["Next.js", "TypeScript", "Tailwind CSS", "SEO Engine", "Edge Hosting"],
+      demoUrl: "https://nusataway.vercel.app",
+      vercelSlug: "nusataway",
+      isLive: true,
+      githubUrl: "https://github.com/trionohidayat/nusataway",
+    },
+    {
+      id: "mentorhub-platform",
+      title: "MentorHub – Collaborative Mentorship & Learning Platform",
+      category: "web",
+      categoryLabel: "Full-Stack EdTech",
+      impact: "Real-Time Scheduling & Roadmaps",
+      problem:
+        "Independent developers and learners lacked an integrated workspace to book structured 1-on-1 mentoring sessions, track competency roadmaps, and review milestone progress.",
+      solution:
+        "Constructed a modern responsive web platform using Next.js, TypeScript, PostgreSQL, and Prisma ORM with automated calendar booking and notification flows.",
+      techStack: ["Next.js", "TypeScript", "React", "PostgreSQL", "Prisma ORM", "Tailwind CSS"],
+      demoUrl: "https://mentorhub-puce.vercel.app",
+      vercelSlug: "mentorhub",
+      isLive: true,
+      githubUrl: "https://github.com/trionohidayat/mentorhub",
+    },
+    {
+      id: "cuci-ac-belitung",
+      title: "Cuci AC Belitung – On-Demand Air Conditioning Platform",
+      category: "web",
+      categoryLabel: "Service On-Demand",
+      impact: "Instant Service Booking & Dispatch",
+      problem:
+        "Residential and corporate customers in Belitung needed an effortless digital booking platform for air conditioning maintenance and transparent technician dispatch.",
+      solution:
+        "Developed a modern on-demand service web application with Next.js featuring direct WhatsApp API integration, pricing calculator, and streamlined technician scheduling.",
+      techStack: ["Next.js", "TypeScript", "Tailwind CSS", "WhatsApp API", "Edge Hosting"],
+      demoUrl: "https://cuci-ac-belitung.vercel.app",
+      vercelSlug: "cuci-ac-belitung-next",
+      isLive: true,
+    },
+    {
+      id: "black-garlic-store",
+      title: "Sehat Herbal – Natural Wellness E-Commerce Platform",
+      category: "web",
+      categoryLabel: "E-Commerce & Health",
+      impact: "Direct-to-Consumer Digital Store",
+      problem:
+        "Traditional herbal health products required a credible, SEO-optimized e-commerce storefront with high conversion rates, product education, and rapid checkout.",
+      solution:
+        "Built a fast, conversion-focused e-commerce web platform deployed with a custom domain (www.sehatherbal.id), rich product catalog, customer testimonials, and direct ordering.",
+      techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Custom Domain", "Conversion UX"],
+      demoUrl: "https://www.sehatherbal.id",
+      vercelSlug: "black-garlic",
+      isLive: true,
+    },
+    {
+      id: "belitung-clean-service",
+      title: "Belitung Clean – Commercial & Residential Cleaning Platform",
+      category: "web",
+      categoryLabel: "Facility Management",
+      impact: "Automated Service Quotes & Booking",
+      problem:
+        "Commercial facilities and villa owners in Belitung required reliable, on-demand professional cleaning with instant quotation estimates and booking tracking.",
+      solution:
+        "Deployed an interactive digital service booking platform on Vercel with responsive rate calculators, automated service confirmations, and mobile-friendly layouts.",
+      techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel Edge", "Interactive UI"],
+      demoUrl: "https://belitung-clean.vercel.app",
+      vercelSlug: "belitung-clean",
+      isLive: true,
+    },
+    {
+      id: "slangio-api",
+      title: "Slangio – Colloquial & Slang Lexicon Edge Service",
+      category: "automation",
+      categoryLabel: "API & Linguistic Engine",
+      impact: "Sub-100ms Linguistic API Queries",
+      problem:
+        "Modern conversational applications and chatbots needed a high-performance lexicon API to parse colloquial slang, informal language, and contemporary vocabulary.",
+      solution:
+        "Designed and deployed a serverless Next.js edge backend delivering high-speed RESTful query endpoints, structured linguistic definitions, and low-latency response times.",
+      techStack: ["Next.js Edge API", "TypeScript", "RESTful Architecture", "JSON Cache"],
+      demoUrl: "https://slangio-backend.vercel.app",
+      vercelSlug: "slangio-backend",
+      isLive: true,
+    },
+    {
       id: "govtech-n8n",
       title: "GovTech Process Digitization & n8n Pipeline",
       category: "automation",
@@ -147,19 +257,6 @@ export const portfolioData = {
       solution:
         "Implemented automated workflow pipelines using n8n and REST APIs to automate data validation, internal report aggregation, and cross-department notification feeds.",
       techStack: ["n8n", "PostgreSQL", "REST API", "Webhooks", "GovTech", "Python"],
-      githubUrl: "https://github.com/trionohidayat",
-    },
-    {
-      id: "wms-rfid",
-      title: "Enterprise WMS & RFID Tracking Solution",
-      category: "systems",
-      categoryLabel: "Systems & RFID",
-      impact: "10+ National Tender Deployments",
-      problem:
-        "Manual inventory verification in large warehouses resulted in stock discrepancies, sluggish dispatch times, and lack of real-time asset visibility.",
-      solution:
-        "Engineered an end-to-end Warehouse Management System (WMS) integrating RFID (HF/UHF) hardware, handheld barcode scanners, and an Android client connected to central servers via MVVM & REST API.",
-      techStack: ["Android (Kotlin)", "RFID HF/UHF", "Barcode SDK", "Room DB", "PostgreSQL", "MVVM"],
       githubUrl: "https://github.com/trionohidayat",
     },
     {
@@ -174,61 +271,6 @@ export const portfolioData = {
         "Developed responsive native Android applications featuring robust digital wallet authentication, shipment tracking API integration, and barcode scanning modules.",
       techStack: ["Android (Java/Kotlin)", "Digital Wallet", "REST API", "Package Tracking", "Security"],
       githubUrl: "https://github.com/trionohidayat",
-    },
-    {
-      id: "fullstack-prisma-platform",
-      title: "Cloud Operations & Data Management Platform",
-      category: "web",
-      categoryLabel: "Full-Stack Web",
-      impact: "Sub-Second Query Latency",
-      problem:
-        "Managing distributed operational data required a type-safe, scalable web interface capable of real-time query performance and automated schema migrations.",
-      solution:
-        "Constructed a high-throughput full-stack web application leveraging Next.js 16, TypeScript, Prisma ORM, and PostgreSQL with CDN caching optimization.",
-      techStack: ["Next.js 16", "TypeScript", "Prisma ORM", "PostgreSQL", "Tailwind CSS"],
-      githubUrl: "https://github.com/trionohidayat",
-    },
-    {
-      id: "tok2tube-automation",
-      title: "Tok2Tube – Automated Video Ingestion & Repurposing Pipeline",
-      category: "automation",
-      categoryLabel: "Media Automation",
-      impact: "10x Faster Publishing Speed",
-      problem:
-        "Cross-posting and archiving short-form videos across creator platforms required hours of manual downloading, metadata conversion, and redundant upload tasks.",
-      solution:
-        "Architected an automated asynchronous pipeline leveraging Python, YouTube Data API v3, and media processing workers to extract, optimize, and distribute video assets automatically.",
-      techStack: ["Python", "YouTube API v3", "FastAPI", "AsyncIO", "FFmpeg", "Automation"],
-      demoUrl: "https://github.com/trionohidayat/tok2tube",
-      githubUrl: "https://github.com/trionohidayat/tok2tube",
-    },
-    {
-      id: "inset-ecosystem",
-      title: "Inset Ecosystem – Distributed Services & Event Integration",
-      category: "systems",
-      categoryLabel: "Distributed Architecture",
-      impact: "Fault-Tolerant Microservices",
-      problem:
-        "Enterprise platforms required decoupled service communications, reliable data synchronization, and resilient message routing across heterogeneous services.",
-      solution:
-        "Engineered a modular microservice ecosystem featuring event-driven architecture, centralized logging, and automated health reconciliation.",
-      techStack: ["TypeScript", "Node.js", "Docker", "Event-Driven", "REST APIs", "Redis"],
-      demoUrl: "https://github.com/trionohidayat/inset-ecosystem",
-      githubUrl: "https://github.com/trionohidayat/inset-ecosystem",
-    },
-    {
-      id: "mentorhub-platform",
-      title: "MentorHub – Collaborative Mentorship & Learning Platform",
-      category: "web",
-      categoryLabel: "Full-Stack Web",
-      impact: "Real-Time Scheduling & Booking",
-      problem:
-        "Independent developers and learners lacked an integrated workspace to book structured 1-on-1 mentoring sessions, track competency roadmaps, and review milestone progress.",
-      solution:
-        "Constructed a modern responsive web platform using Next.js, TypeScript, PostgreSQL, and Prisma ORM with automated calendar booking and notification flows.",
-      techStack: ["Next.js", "TypeScript", "React", "PostgreSQL", "Prisma ORM", "Tailwind CSS"],
-      demoUrl: "https://github.com/trionohidayat/mentorhub",
-      githubUrl: "https://github.com/trionohidayat/mentorhub",
     },
   ] as Project[],
 

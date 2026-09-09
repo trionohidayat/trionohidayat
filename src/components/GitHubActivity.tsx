@@ -348,12 +348,12 @@ export const GitHubActivity = () => {
                   <div className="pt-0.5">
                     Contributed to{' '}
                     <a
-                      href="https://github.com/trionohidayat/inset-ecosystem"
+                      href="https://github.com/trionohidayat/nusataway"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-semibold text-blue-400 hover:text-blue-300 hover:underline inline-block"
                     >
-                      trionohidayat/inset-ecosystem
+                      trionohidayat/nusataway
                     </a>
                     ,{' '}
                     <a

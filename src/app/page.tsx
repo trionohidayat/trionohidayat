@@ -3,7 +3,6 @@ import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Services } from '@/components/Services';
 import { Projects } from '@/components/Projects';
-import { VercelProjects } from '@/components/VercelProjects';
 import { GitHubActivity } from '@/components/GitHubActivity';
 import { Skills } from '@/components/Skills';
 import { Experience } from '@/components/Experience';
@@ -26,9 +25,6 @@ export default function Home() {
 
         {/* Featured Case Studies with Category Filters */}
         <Projects />
-
-        {/* Live Vercel Deployments & Applications */}
-        <VercelProjects />
 
         {/* Live GitHub Contributions & Footprint */}
         <GitHubActivity />
