@@ -1,0 +1,45 @@
+# Triono Hidayat
+
+> Senior Full-Stack Solutions Developer & IT Systems Officer. Specializing in high-performance Next.js web applications, native Android solutions, RFID/WMS logistics, and n8n workflow automations.
+
+## Overview
+Triono Hidayat is an Indonesian software engineer, IT Systems Officer, and solutions consultant with 8+ years of cross-industry experience. He bridges public-sector GovTech standards (Ministry of Manpower / Kemnaker RI), RFID/WMS logistics engineering, and modern full-stack web and mobile engineering for international clients.
+
+- Location: Jakarta, Indonesia (UTC+7) • Working Worldwide
+- Availability: Open for Remote Freelance, Contract Projects & Technical Consulting
+- Website: https://trionohidayat.my.id
+- Complete Profile: https://trionohidayat.my.id/llms-full.txt
+
+## Core Competencies
+- Full-Stack Web Development: Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, Prisma ORM, PostgreSQL, Server-Side Rendering (SSR).
+- Workflow Automation & AI: n8n (Self-hosted & Cloud), AI Agents, REST APIs, Webhooks, Data Pipelines, Process Digitization.
+- Mobile & Hardware Systems: Native Android (Kotlin & Java, MVVM, Room DB), RFID (HF/UHF), Barcode Scanners, NFC, IoT.
+- Enterprise Systems & Leadership: IT Project Management (Agile, Jira), GovTech Information Systems, Warehouse Management Systems (WMS), Technical Documentation & SOPs.
+
+## Professional Experience
+- Penata Kelola Sistem dan Teknologi Informasi at Kementerian Ketenagakerjaan RI (Kemnaker) (May 2025 – Present)
+- Remote Project Manager (Freelance) at PT Wahana Datarindo Sempurna (June 2025 – Nov 2025)
+- Head of Software Department at PT Wahana Datarindo Sempurna (June 2023 – June 2025)
+- Android Developer at PT Wahana Datarindo Sempurna (July 2022 – June 2023)
+- Android Developer at PT Satria Antaran Prima Tbk. (SAP Express) (Jan 2022 – June 2022)
+- WordPress Developer at PT Spekta Cipta Interusa (March 2020 – Oct 2021)
+- IT Support & Network Technician at Kantor Camat Tanjung Pandan (July 2015 – Sept 2015)
+
+## Featured Projects
+- [Tok2Tube](https://tok2tube.vercel.app): Automated video ingestion and cross-platform publishing pipeline (Next.js, Python, YouTube Data API v3).
+- [Nusataway](https://nusataway.vercel.app): Island tours and travel discovery web platform with optimized SEO and dynamic booking inquiries.
+- [MentorHub](https://mentorhub-puce.vercel.app): Collaborative mentorship and learning platform with automated scheduling (Next.js, TypeScript, PostgreSQL, Prisma).
+- [Cuci AC Belitung](https://cuci-ac-belitung.vercel.app): On-demand AC maintenance booking platform with WhatsApp API integration.
+- [Sehat Herbal](https://www.sehatherbal.id): High-conversion e-commerce platform for herbal wellness products.
+- [Belitung Clean](https://belitung-clean.vercel.app): Commercial & residential cleaning service booking platform.
+- [Slangio API](https://slangio-backend.vercel.app): Sub-100ms serverless colloquial and slang lexicon edge API.
+- GovTech n8n Automation: Enterprise workflow pipelines automating inter-directorate data validation and report feeds.
+- SAP Express Logistics App: Enterprise Android app for package tracking, digital wallet, and barcode logistics sync.
+
+## Verified Profiles & Contact
+- Website: https://trionohidayat.my.id
+- Email: trionohidayat3@gmail.com
+- WhatsApp: https://wa.me/6287788084441 (+62 877-8808-4441)
+- GitHub: https://github.com/trionohidayat
+- LinkedIn: https://www.linkedin.com/in/triono-hidayat
+- YouTube: https://youtube.com/@triono.hidayat

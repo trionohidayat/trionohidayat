@@ -1,0 +1,276 @@
+# Triono Hidayat – Comprehensive Profile & Portfolio (llms-full.txt)
+
+> Senior Full-Stack Solutions Developer & IT Systems Officer. Bridging public-sector GovTech standards, RFID/WMS logistics engineering, and modern Next.js & Android development for global businesses.
+
+- Full Name: Triono Hidayat
+- Primary Role: GovTech & Full-Stack Solutions Developer
+- Secondary Titles: IT Systems Officer | AI & Workflow Automation Specialist (n8n) | RFID & Mobile Specialist
+- Location: Jakarta, Indonesia (UTC+7) • Serving Clients Worldwide
+- Status: Available for Remote Freelance & Contract Projects
+- Years of Experience: 8+ Years
+- Completed Projects: 25+ Production Applications & Systems
+- Process Automation: 2,000+ Operational Hours Saved
+- Official Website: https://trionohidayat.my.id
+
+---
+
+## 1. Professional Summary & Bio
+Triono Hidayat is an IT Systems Officer, Solutions Developer, and Project Manager with extensive cross-industry experience spanning enterprise GovTech, RFID & Warehouse Management Systems (WMS), and native Android application development.
+
+Currently serving as Penata Kelola Sistem dan Teknologi Informasi at the Ministry of Manpower of the Republic of Indonesia (Kementerian Ketenagakerjaan RI / Kemnaker), he focuses on process digitalization, AI workflow automation (n8n), and scalable software systems for public sector expansion initiatives. As an independent remote consultant and freelance project manager, he leads cross-functional initiatives and builds high-performance, resilient digital solutions for international and domestic clients.
+
+---
+
+## 2. Core Service Offerings
+
+### Service 1: Workflow Automation (n8n) & AI
+Architecting resilient workflow automations and data pipelines using n8n, AI agents, and webhooks to eliminate repetitive administrative overhead and synchronize cross-platform data.
+- Highlights:
+  * End-to-End n8n Workflow Design (Self-Hosted & Cloud)
+  * AI Agent & Generative AI Integration
+  * Multi-Service Webhooks & REST API Data Pipelines
+  * GovTech & Enterprise Process Digitization
+
+### Service 2: Mobile & RFID Solutions
+Engineering high-performance native Android applications with Java and Kotlin, featuring offline-first capabilities, Room DB, and deep hardware integrations (RFID, NFC, Barcode).
+- Highlights:
+  * Native Android Development with Kotlin & Java (MVVM Architecture)
+  * Hardware Integration: RFID (HF/UHF), Barcode Scanners, NFC
+  * Offline-First Architecture with Local SQLite / Room Database
+  * Warehouse Management System (WMS) & Logistics Apps
+
+### Service 3: Full-Stack Web Development
+Building fast, modern, and SEO-optimized web applications and SaaS dashboards using TypeScript, Next.js 16, React 19, Tailwind CSS v4, and Prisma ORM.
+- Highlights:
+  * Modern Stack: Next.js 16 (App Router), React 19, TypeScript
+  * Database Modeling with Prisma ORM & PostgreSQL / MySQL
+  * Server-Side Rendering (SSR) & High-Speed API Routes
+  * CDN, Caching & Performance Architecture
+
+### Service 4: IT Systems & Project Management
+Guiding digital initiatives from initial technical proposals and PoC to deployment. Proven track record leading cross-functional teams, hardware vendors, and national-scale tenders.
+- Highlights:
+  * Agile Project Leadership (Jira, Trello, Remote Team Management)
+  * Technical Documentation, System SOPs & Tender Proposals
+  * Hardware-Software Interoperability & Risk Mitigation
+  * Data Governance & Operational Integrity
+
+---
+
+## 3. Featured Projects & Case Studies
+
+### 1. Tok2Tube – Video Ingestion & Multi-Platform Pipeline
+- Category: Media Automation / Workflow
+- Impact: 10x Faster Publishing Speed
+- Problem: Cross-posting and archiving short-form videos across creator platforms required hours of manual downloading, metadata conversion, and redundant upload tasks.
+- Solution: Architected an automated asynchronous pipeline leveraging Next.js, Python, YouTube Data API v3, and media processing workers to extract, optimize, and distribute video assets automatically.
+- Tech Stack: Next.js, TypeScript, Python, YouTube API v3, FastAPI, Tailwind CSS
+- Demo URL: https://tok2tube.vercel.app
+- GitHub URL: https://github.com/trionohidayat/tok2tube
+
+### 2. Nusataway – Island Tours & Travel Discovery Platform
+- Category: Travel & Tourism Tech
+- Impact: Interactive Tour Booking & Discovery
+- Problem: Travelers in regional destinations struggled to discover curated tour packages, customized itineraries, and authentic local experiences with seamless digital booking.
+- Solution: Engineered a high-performance, mobile-first travel web application using Next.js with optimized PageSpeed, dynamic package filtering, and responsive booking inquiries.
+- Tech Stack: Next.js, TypeScript, Tailwind CSS, SEO Engine, Edge Hosting
+- Demo URL: https://nusataway.vercel.app
+- GitHub URL: https://github.com/trionohidayat/nusataway
+
+### 3. MentorHub – Collaborative Mentorship & Learning Platform
+- Category: Full-Stack EdTech
+- Impact: Real-Time Scheduling & Roadmaps
+- Problem: Independent developers and learners lacked an integrated workspace to book structured 1-on-1 mentoring sessions, track competency roadmaps, and review milestone progress.
+- Solution: Constructed a modern responsive web platform using Next.js, TypeScript, PostgreSQL, and Prisma ORM with automated calendar booking and notification flows.
+- Tech Stack: Next.js, TypeScript, React, PostgreSQL, Prisma ORM, Tailwind CSS
+- Demo URL: https://mentorhub-puce.vercel.app
+- GitHub URL: https://github.com/trionohidayat/mentorhub
+
+### 4. Cuci AC Belitung – On-Demand Air Conditioning Platform
+- Category: Service On-Demand
+- Impact: Instant Service Booking & Dispatch
+- Problem: Residential and corporate customers in Belitung needed an effortless digital booking platform for air conditioning maintenance and transparent technician dispatch.
+- Solution: Developed a modern on-demand service web application with Next.js featuring direct WhatsApp API integration, pricing calculator, and streamlined technician scheduling.
+- Tech Stack: Next.js, TypeScript, Tailwind CSS, WhatsApp API, Edge Hosting
+- Demo URL: https://cuci-ac-belitung.vercel.app
+
+### 5. Sehat Herbal – Natural Wellness E-Commerce Platform
+- Category: E-Commerce & Health
+- Impact: Direct-to-Consumer Digital Store
+- Problem: Traditional herbal health products required a credible, SEO-optimized e-commerce storefront with high conversion rates, product education, and rapid checkout.
+- Solution: Built a fast, conversion-focused e-commerce web platform deployed with a custom domain (www.sehatherbal.id), rich product catalog, customer testimonials, and direct ordering.
+- Tech Stack: Next.js, TypeScript, Tailwind CSS, Custom Domain, Conversion UX
+- Demo URL: https://www.sehatherbal.id
+
+### 6. Belitung Clean – Commercial & Residential Cleaning Platform
+- Category: Facility Management
+- Impact: Automated Service Quotes & Booking
+- Problem: Commercial facilities and villa owners in Belitung required reliable, on-demand professional cleaning with instant quotation estimates and booking tracking.
+- Solution: Deployed an interactive digital service booking platform on Vercel with responsive rate calculators, automated service confirmations, and mobile-friendly layouts.
+- Tech Stack: Next.js, TypeScript, Tailwind CSS, Vercel Edge, Interactive UI
+- Demo URL: https://belitung-clean.vercel.app
+
+### 7. Slangio – Colloquial & Slang Lexicon Edge Service
+- Category: API & Linguistic Engine
+- Impact: Sub-100ms Linguistic API Queries
+- Problem: Modern conversational applications and chatbots needed a high-performance lexicon API to parse colloquial slang, informal language, and contemporary vocabulary.
+- Solution: Designed and deployed a serverless Next.js edge backend delivering high-speed RESTful query endpoints, structured linguistic definitions, and low-latency response times.
+- Tech Stack: Next.js Edge API, TypeScript, RESTful Architecture, JSON Cache
+- Demo URL: https://slangio-backend.vercel.app
+
+### 8. GovTech Process Digitization & n8n Pipeline
+- Category: Workflow Automation / GovTech
+- Impact: Multi-Directorate Data Sync
+- Problem: Administrative tracking, inter-directorate data synchronization, and reporting across employment expansion initiatives involved fragmented manual workflows and communication bottlenecks.
+- Solution: Implemented automated workflow pipelines using n8n and REST APIs to automate data validation, internal report aggregation, and cross-department notification feeds.
+- Tech Stack: n8n, PostgreSQL, REST API, Webhooks, GovTech, Python
+
+### 9. SAP Express Logistics & Digital Wallet Mobile Suite
+- Category: Mobile Application / Logistics
+- Impact: Nationwide Package & Payment Sync
+- Problem: Field logistics operations needed real-time package tracking, shipment milestone logging, and a secure internal digital wallet for operational payment transactions.
+- Solution: Developed responsive native Android applications featuring robust digital wallet authentication, shipment tracking API integration, and barcode scanning modules.
+- Tech Stack: Android (Java/Kotlin), Digital Wallet, REST API, Package Tracking, Security
+
+---
+
+## 4. Technical Skillsets
+
+### Web & Full-Stack
+- TypeScript, JavaScript (ESNext)
+- Next.js 16 (App Router, Server Actions, SSR, SSG)
+- React 19, React Hooks
+- Tailwind CSS v4, Motion (Framer Motion)
+- Prisma ORM, PostgreSQL, MySQL
+- RESTful APIs, Next.js Edge Runtime, Serverless
+
+### Mobile & Hardware Integration
+- Native Android Development (Kotlin & Java)
+- MVVM & Repository Architecture Pattern
+- Room Database (SQLite), Offline-First sync
+- RFID Integration (HF / UHF readers and SDKs)
+- Barcode & QR Code Scanners, NFC, Bluetooth Low Energy (BLE)
+
+### Automation, AI & Cloud
+- n8n (Self-hosted via Docker, Cloud)
+- Generative AI & AI Agent Workflows
+- Webhooks & API Integration Pipelines
+- Python Scripting & FastAPI
+- Docker, Linux VPS, Git & GitHub CI/CD
+- Redis Caching, CDN & Web Vitals Optimization
+
+### Systems & Leadership
+- IT Project Management (Agile / Scrum, Jira, Trello)
+- GovTech Information Systems Standards
+- Warehouse Management Systems (WMS)
+- Technical Documentation, SOPs, and Tender Proposals
+- Hardware-Software Interoperability & Presales PoC
+
+---
+
+## 5. Work Experience
+
+### 1. Kementerian Ketenagakerjaan RI (Kemnaker)
+- Role: Penata Kelola Sistem dan Teknologi Informasi
+- Period: May 2025 – Present
+- Location: South Jakarta, Indonesia
+- Key Responsibilities:
+  * Directorate of Employment Placement and Expansion of Employment Opportunities (Binapenta & PKK) – Administration Sub-division.
+  * Developing and managing internal information systems supporting strategic employment expansion initiatives.
+  * Pioneering process digitalization and automated workflows using platforms such as n8n.
+  * Authoring technical documentation, digital system SOPs, and ensuring cross-directorate operational data integrity and security.
+  * Supporting data mapping, visual dashboarding, and central synchronization.
+
+### 2. PT Wahana Datarindo Sempurna
+- Role: Remote Project Manager (Freelance)
+- Period: June 2025 – November 2025
+- Location: South Jakarta, Indonesia (Remote)
+- Key Responsibilities:
+  * Led end-to-end execution of WMS software and RFID hardware tracking initiatives.
+  * Acted as primary liaison between enterprise stakeholders, engineering teams, hardware suppliers, and operations staff.
+  * Maintained Agile sprint velocity using Jira/Trello, managing risks, change requests, and client review sessions.
+
+### 3. PT Wahana Datarindo Sempurna
+- Role: Head of Software Department
+- Period: June 2023 – June 2025
+- Location: South Jakarta, Indonesia
+- Key Responsibilities:
+  * Directed full product lifecycles from presales/PoC presentations to production rollout and support.
+  * Designed nationwide RFID asset tracking and personnel monitoring systems.
+  * Led technical architectures and document preparation for 10+ major corporate and governmental tenders.
+
+### 4. PT Wahana Datarindo Sempurna
+- Role: Android Developer
+- Period: July 2022 – June 2023
+- Location: South Jakarta, Indonesia
+- Key Responsibilities:
+  * Developed Android Warehouse Management System (WMS) integrated with RFID (HF/UHF) handheld SDKs and barcode scanners.
+  * Engineered offline-first syncing using Room DB and REST APIs.
+  * Implemented MVVM architecture and provided on-site deployment and testing in operational warehouses.
+
+### 5. PT Satria Antaran Prima Tbk. (SAP Express)
+- Role: Android Developer
+- Period: January 2022 – June 2022
+- Location: DKI Jakarta, Indonesia
+- Key Responsibilities:
+  * Developed native Android modules for courier package tracking, warehouse scanning, and internal digital wallet transactions.
+  * Enforced robust authentication and transaction security protocols for digital financial modules.
+
+### 6. PT Spekta Cipta Interusa
+- Role: WordPress Developer
+- Period: March 2020 – October 2021
+- Location: Belitung, Indonesia
+- Key Responsibilities:
+  * Configured Cloudflare CDN, server caching mechanisms, secure login flows, and automated disaster recovery backups.
+
+### 7. Kantor Camat Tanjung Pandan
+- Role: IT Support & Network Technician (Internship)
+- Period: July 2015 – September 2015
+- Location: Belitung, Indonesia
+- Key Responsibilities:
+  * Designed local network infrastructure (LAN & Wi-Fi), router and switch configuration, cabling, and workstation hardware maintenance.
+
+---
+
+## 6. Formal Education
+
+1. **Strata I (S1) – Teknik Informatika**
+   - STMIK Nusa Mandiri, Jakarta (2017 – 2019)
+   - Focus: Software engineering, database design, computational systems, and IT architecture.
+
+2. **Diploma III (D3) – Teknik Komputer**
+   - Universitas Bina Sarana Informatika (BSI), Jakarta (2013 – 2016)
+   - Focus: Computer hardware engineering, networking, system administration, and programming foundations.
+
+---
+
+## 7. Selected Licenses & Certifications
+
+- **AI & Cloud:**
+  * DIGDAYA Practitioner Phase – LPPI (Aug 2026)
+  * Belajar Penerapan Machine Learning dengan Google Cloud – Dicoding (Aug 2026)
+  * Deploy Multi-Agent Architectures – Google (Jul 2026)
+  * Engineer AI Agents with Agent Development Kit (ADK) – Google (Jul 2026)
+  * Orchestrate Multi-agent Workflows with Gemini Enterprise – Google (Jul 2026)
+  * Create Your First Gemini Enterprise Application – Google (Jul 2026)
+  * Pengembangan Generative AI berbasis LLM – Dicoding (Jul 2026)
+  * Prompt Engineering untuk Software Developer – Dicoding (May 2026)
+  * Cloud Practitioner Essentials (AWS Cloud) – Dicoding (Feb 2023)
+
+- **Software Engineering & Mobile:**
+  * Spec-Driven Development dengan Kiro – Dicoding (Apr 2026)
+  * Belajar Prinsip Pemrograman SOLID – Dicoding (Jun 2026)
+  * Oracle Java Fundamentals & Programming – Oracle (Oct 2020)
+  * Internet of Things (IoT) – Kominfo DTS (Aug 2019)
+  * Kotlin from Zero to Hero – Udacoding (Jun 2019)
+  * Android Mobile Programming Mastery – Skill Academy (Oct 2020)
+
+---
+
+## 8. Official Contact & Links
+- Website: https://trionohidayat.my.id
+- Email: trionohidayat3@gmail.com
+- WhatsApp: https://wa.me/6287788084441 (+62 877-8808-4441)
+- GitHub: https://github.com/trionohidayat
+- LinkedIn: https://www.linkedin.com/in/triono-hidayat
+- YouTube: https://youtube.com/@triono.hidayat
