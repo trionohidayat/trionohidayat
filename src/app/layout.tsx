@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://trionohidayat.vercel.app";
+const siteUrl = "https://trionohidayat.my.id";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -42,6 +42,9 @@ export const metadata: Metadata = {
   creator: "Triono Hidayat",
   alternates: {
     canonical: siteUrl,
+  },
+  verification: {
+    google: "2HK6Fpg3zBZYUubvTBZ7dUOe0YAVXVSw8gHOmCv-qF8",
   },
   openGraph: {
     type: "website",

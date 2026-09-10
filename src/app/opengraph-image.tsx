@@ -52,7 +52,7 @@ export default async function Image() {
               fontFamily: 'monospace',
             }}
           >
-            trionohidayat.vercel.app
+            trionohidayat.my.id
           </div>
         </div>
 
