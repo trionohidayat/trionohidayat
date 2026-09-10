@@ -1,8 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import { ArrowUp, Terminal, FileText } from 'lucide-react';
+import { ArrowUp, Terminal } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 
 export const Footer = () => {
@@ -16,7 +15,7 @@ export const Footer = () => {
     <footer className="py-10 sm:py-12 px-4 sm:px-6 border-t border-white/5 relative bg-zinc-950 overflow-hidden isolate w-full max-w-full">
       <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Brand & Tagline */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 shrink-0">
           <div className="w-8 h-8 rounded-lg bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
             <Terminal className="w-4 h-4" />
           </div>
@@ -30,26 +29,55 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Middle Tech Tag & Resume Link */}
-        <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-zinc-400 font-mono">
-          <span>Next.js 16 &amp; Tailwind CSS</span>
-          <span className="text-zinc-600">&bull;</span>
-          <Link
-            href="/resume"
-            className="inline-flex items-center gap-1 text-zinc-300 hover:text-blue-400 transition-colors"
-          >
-            <FileText className="w-3.5 h-3.5" />
-            <span>Interactive Resume</span>
-          </Link>
-          <span className="text-zinc-600">&bull;</span>
+        {/* Colophon Credits (Brittany Chiang style) */}
+        <p className="text-xs text-zinc-400 leading-relaxed text-center max-w-sm sm:max-w-md">
+          Designed and coded in{' '}
           <a
-            href="/download"
-            className="text-zinc-300 hover:text-emerald-400 transition-colors"
-            title="Download PDF"
+            href="https://antigravity.google"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-zinc-200 hover:text-blue-400 transition-colors"
           >
-            Download PDF
+            Google Antigravity
+          </a>{' '}
+          by yours truly. Built with{' '}
+          <a
+            href="https://nextjs.org/"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-zinc-200 hover:text-blue-400 transition-colors"
+          >
+            Next.js
+          </a>{' '}
+          and{' '}
+          <a
+            href="https://tailwindcss.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-zinc-200 hover:text-blue-400 transition-colors"
+          >
+            Tailwind CSS
           </a>
-        </div>
+          , deployed with{' '}
+          <a
+            href="https://vercel.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-zinc-200 hover:text-blue-400 transition-colors"
+          >
+            Vercel
+          </a>
+          . All text is set in the{' '}
+          <a
+            href="https://rsms.me/inter/"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-zinc-200 hover:text-blue-400 transition-colors"
+          >
+            Inter
+          </a>{' '}
+          typeface.
+        </p>
 
         {/* Right Info & Back to Top */}
         <div className="flex items-center gap-4">
