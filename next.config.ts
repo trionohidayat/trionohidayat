@@ -32,6 +32,21 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "trionohidayat.vercel.app",
+          },
+        ],
+        destination: "https://trionohidayat.my.id/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
