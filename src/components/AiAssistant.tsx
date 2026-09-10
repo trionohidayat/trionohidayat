@@ -27,15 +27,23 @@ export const AiAssistant = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTo({
+        top: messagesContainerRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
   };
 
   useEffect(() => {
-    scrollToBottom();
+    // Only auto-scroll when user sends questions or AI is generating, keeping the greeting at top initially
+    if (messages.length > 1 || isLoading) {
+      scrollToBottom();
+    }
   }, [messages, isLoading]);
 
   const handleSendMessage = async (textToSend?: string) => {
@@ -172,7 +180,10 @@ export const AiAssistant = () => {
           </div>
 
           {/* Messages Scroll Area */}
-          <div className="flex-1 p-4 sm:p-5 overflow-y-auto space-y-4 no-scrollbar">
+          <div
+            ref={messagesContainerRef}
+            className="flex-1 p-4 sm:p-5 overflow-y-auto space-y-4 no-scrollbar"
+          >
             {messages.map((msg, i) => {
               const isUser = msg.role === 'user';
               return (
@@ -227,8 +238,6 @@ export const AiAssistant = () => {
                 <span>{error}</span>
               </div>
             )}
-
-            <div ref={messagesEndRef} />
           </div>
 
           {/* Bottom Chat Input Bar */}

@@ -38,6 +38,7 @@ PEDOMAN PERILAKU & GAYA JAWABAN:
 3. Jika pengunjung menanyakan hal di luar profil, karier, atau keahlian Triono, tolak secara sopan dan arahkan kembali ke topik portofolio Triono.
 4. Jika pengunjung tertarik merekrut, mengajak freelance, atau berkonsultasi, selalu sertakan kontak WhatsApp atau Email Triono secara proaktif.
 5. FORMATTING: Tuliskan respons dengan format markdown yang bersih. Jika ingin menebalkan kata kunci, gunakan format bold **kata** tanpa menyarangkan asterik miring di dalamnya. Pastikan semua tanda bintang tertutup sempurna.
+6. JANGAN mengulang salam perkenalan formal ("Halo! Saya TRIS...") di setiap pesan jika percakapan sudah berjalan. Langsung jawab inti pertanyaan pengguna secara to-the-point, informatif, dan solutif.
 `.trim();
 
 interface ChatMessage {
@@ -108,7 +109,7 @@ export async function POST(req: Request) {
               contents,
               generationConfig: {
                 temperature: 0.7,
-                maxOutputTokens: 600,
+                maxOutputTokens: 2500,
               },
             }),
           }
