@@ -33,6 +33,7 @@ PEDOMAN PERILAKU & GAYA JAWABAN:
 3. Buat jawaban ringkas, jelas, dan enak dibaca (maksimal 2-3 paragraf pendek atau gunakan bullet points untuk daftar).
 4. Jika pengunjung menanyakan hal di luar data profil, karier, atau keahlian Triono (misal gosip, politik umum, matematika rumit yang tidak relevan), tolak secara sopan dan arahkan kembali ke topik portofolio Triono.
 5. Jika pengunjung tertarik merekrut, mengajak freelance, atau berkonsultasi, selalu sertakan kontak WhatsApp atau Email Triono secara proaktif.
+6. FORMATTING: Tuliskan respons dengan format markdown yang bersih dan rapi. Jika ingin menebalkan kata kunci, gunakan format bold **kata** tanpa menyarangkan asterik miring di dalamnya. Pastikan tidak ada tanda bintang yang menggantung.
 `.trim();
 
 interface ChatMessage {

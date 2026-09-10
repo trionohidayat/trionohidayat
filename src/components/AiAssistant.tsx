@@ -127,18 +127,21 @@ export const AiAssistant = () => {
           Punya pertanyaan seputar arsitektur GovTech, automasi n8n, atau ingin mendiskusikan peluang kerja sama? Tanyakan langsung pada representasi AI saya.
         </p>
 
-        {/* Suggestion Chips */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-2 max-w-2xl">
-          {DEFAULT_QUESTIONS.map((question, idx) => (
-            <button
-              key={idx}
-              onClick={() => handleSendMessage(question)}
-              disabled={isLoading}
-              className="px-3 py-1.5 rounded-xl bg-zinc-900/80 hover:bg-zinc-800 text-[11px] sm:text-xs text-zinc-300 hover:text-white border border-white/5 hover:border-blue-500/30 transition-all cursor-pointer active:scale-95 disabled:opacity-50 disabled:pointer-events-none"
-            >
-              💡 {question}
-            </button>
-          ))}
+        {/* Horizontal Suggestion Chips Container */}
+        <div className="mt-6 w-full max-w-4xl overflow-x-auto no-scrollbar py-1">
+          <div className="flex items-center gap-2.5 w-max mx-auto px-2">
+            {DEFAULT_QUESTIONS.map((question, idx) => (
+              <button
+                key={idx}
+                onClick={() => handleSendMessage(question)}
+                disabled={isLoading}
+                className="whitespace-nowrap shrink-0 px-4 py-2 rounded-full bg-zinc-900/90 hover:bg-zinc-800 text-xs text-zinc-300 hover:text-white border border-white/10 hover:border-blue-500/40 transition-all cursor-pointer active:scale-95 disabled:opacity-50 disabled:pointer-events-none shadow-sm flex items-center gap-1.5"
+              >
+                <span>💡</span>
+                <span>{question}</span>
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Interactive Chat Box Container */}
@@ -265,62 +268,122 @@ export const AiAssistant = () => {
   );
 };
 
-// Simple formatter to parse bold **text**, bullet points, and links into React elements
+// Comprehensive formatter to parse markdown (bold, italic, links, code, bullets) and clean stray asterisks
 function renderFormattedText(text: string): React.ReactNode {
   const lines = text.split('\n');
+
   return lines.map((line, idx) => {
     const trimmed = line.trim();
     if (!trimmed) {
       return <div key={idx} className="h-1.5" />;
     }
 
-    // Bullet point line
-    const isBullet = trimmed.startsWith('- ') || trimmed.startsWith('* ');
-    const displayContent = isBullet ? trimmed.replace(/^[-*]\s+/, '') : line;
+    // Bullet point or numbered list item
+    const isBullet =
+      trimmed.startsWith('- ') ||
+      trimmed.startsWith('* ') ||
+      trimmed.startsWith('• ') ||
+      /^\d+\.\s+/.test(trimmed);
 
-    // Inline regex for bold **text** and markdown links [text](url)
-    const parts = displayContent.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\))/g);
+    const displayContent = trimmed.replace(/^([-*•]|\d+\.)\s+/, '');
 
-    const renderedParts = parts.map((part, pIdx) => {
-      if (part.startsWith('**') && part.endsWith('**')) {
-        return (
-          <strong key={pIdx} className="font-semibold text-white">
-            {part.slice(2, -2)}
-          </strong>
-        );
-      }
-      if (part.startsWith('[') && part.includes('](') && part.endsWith(')')) {
-        const match = part.match(/\[(.*?)\]\((.*?)\)/);
-        if (match) {
-          return (
-            <a
-              key={pIdx}
-              href={match[2]}
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors"
-            >
-              {match[1]}
-            </a>
-          );
-        }
-      }
-      return part;
-    });
+    return (
+      <div
+        key={idx}
+        className={`my-1 ${isBullet ? 'flex items-start gap-2 pl-1' : ''}`}
+      >
+        {isBullet && (
+          <span className="text-blue-400 font-bold leading-relaxed text-sm select-none shrink-0">
+            &bull;
+          </span>
+        )}
+        <span className="flex-1 leading-relaxed">
+          {parseInlineMarkdown(displayContent)}
+        </span>
+      </div>
+    );
+  });
+}
 
-    if (isBullet) {
+function parseInlineMarkdown(text: string): React.ReactNode {
+  // Regex matches:
+  // 1. Markdown link: [text](url)
+  // 2. Inline code: `code`
+  // 3. Bold-Italic: ***text***
+  // 4. Bold: **text**
+  // 5. Italic: *text* or _text_
+  const tokenRegex = /(\[.*?\]\(.*?\)|\`.*?\`|\*\*\*.*?\*\*\*|\*\*[\s\S]*?\*\*|\*[^*\n]+?\*|_[^_\n]+?_)/g;
+  const parts = text.split(tokenRegex);
+
+  return parts.map((part, pIdx) => {
+    if (!part) return null;
+
+    // Bold + Italic (***text***)
+    if (part.startsWith('***') && part.endsWith('***') && part.length >= 6) {
+      const inner = part.slice(3, -3).replace(/\*/g, '');
       return (
-        <div key={idx} className="flex items-start gap-1.5 my-0.5">
-          <span className="text-blue-400 leading-none mt-1 text-[11px]">&bull;</span>
-          <span className="flex-1">{renderedParts}</span>
-        </div>
+        <strong key={pIdx} className="font-semibold text-white italic">
+          {inner}
+        </strong>
       );
     }
 
-    return (
-      <div key={idx} className="my-0.5">
-        {renderedParts}
-      </div>
-    );
+    // Bold (**text**)
+    if (part.startsWith('**') && part.endsWith('**') && part.length >= 4) {
+      // Clean any nested single * inside bold (e.g. **proyek *Remote* ini**)
+      const inner = part.slice(2, -2).replace(/\*/g, '');
+      return (
+        <strong key={pIdx} className="font-semibold text-white">
+          {inner}
+        </strong>
+      );
+    }
+
+    // Italic (*text* or _text_)
+    if (
+      (part.startsWith('*') && part.endsWith('*') && part.length >= 2) ||
+      (part.startsWith('_') && part.endsWith('_') && part.length >= 2)
+    ) {
+      const inner = part.slice(1, -1).replace(/[*_]/g, '');
+      return (
+        <em key={pIdx} className="italic text-zinc-300">
+          {inner}
+        </em>
+      );
+    }
+
+    // Inline code (`code`)
+    if (part.startsWith('`') && part.endsWith('`') && part.length >= 2) {
+      return (
+        <code
+          key={pIdx}
+          className="px-1.5 py-0.5 rounded bg-zinc-800 border border-white/10 text-blue-300 font-mono text-xs"
+        >
+          {part.slice(1, -1)}
+        </code>
+      );
+    }
+
+    // Markdown link ([text](url))
+    if (part.startsWith('[') && part.includes('](') && part.endsWith(')')) {
+      const match = part.match(/\[(.*?)\]\((.*?)\)/);
+      if (match) {
+        return (
+          <a
+            key={pIdx}
+            href={match[2]}
+            target="_blank"
+            rel="noreferrer"
+            className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors font-medium"
+          >
+            {match[1]}
+          </a>
+        );
+      }
+    }
+
+    // Plain text: strip any accidental stray unclosed asterisks so no raw ** or * leak
+    const cleanContent = part.replace(/\*\*/g, '').replace(/\*/g, '');
+    return <span key={pIdx}>{cleanContent}</span>;
   });
 }
