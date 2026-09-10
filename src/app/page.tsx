@@ -7,6 +7,7 @@ import { GitHubActivity } from '@/components/GitHubActivity';
 import { Skills } from '@/components/Skills';
 import { Experience } from '@/components/Experience';
 import { Education } from '@/components/Education';
+import { LatestArticles } from '@/components/LatestArticles';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 
@@ -37,6 +38,9 @@ export default function Home() {
 
         {/* Education & Certifications */}
         <Education />
+
+        {/* Featured Technical Writing & Insights */}
+        <LatestArticles />
 
         {/* Direct Contact & Collaboration */}
         <Contact />
