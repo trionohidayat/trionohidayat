@@ -22,11 +22,11 @@ export default function Home() {
         {/* Hero Section */}
         <Hero />
 
+        {/* TRIS - Triono Responsive Intelligence System (Powered by Google Gemini) */}
+        <AiAssistant />
+
         {/* 4 Core Offerings */}
         <Services />
-
-        {/* AI Digital Twin (Powered by Google Gemini) */}
-        <AiAssistant />
 
         {/* Featured Case Studies with Category Filters */}
         <Projects />

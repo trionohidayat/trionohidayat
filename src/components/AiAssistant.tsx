@@ -20,7 +20,7 @@ export const AiAssistant = () => {
     {
       role: 'assistant',
       content:
-        'Halo! Saya adalah **AI Digital Twin dari Triono Hidayat**, ditenagai oleh **Google Gemini 3.6 Flash**. Ada yang ingin Anda ketahui tentang keahlian sistem pemerintahan, automasi n8n, proyek web Next.js, atau ketersediaan kerja sama?',
+        'Halo! Saya adalah **TRIS** (*Triono Responsive Intelligence System*), asisten AI resmi yang mewakili Triono Hidayat. Ditenagai oleh **Google Gemini**, ada yang ingin Anda ketahui seputar arsitektur GovTech, automasi n8n, proyek web Next.js, atau peluang kerja sama?',
     },
   ]);
   const [input, setInput] = useState('');
@@ -65,7 +65,7 @@ export const AiAssistant = () => {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || 'Gagal menghubungi asisten AI.');
+        throw new Error(data.error || 'Gagal menghubungi asisten TRIS.');
       }
 
       setMessages((prev) => [
@@ -77,7 +77,7 @@ export const AiAssistant = () => {
       ]);
     } catch (err: unknown) {
       const errorMessage =
-        err instanceof Error ? err.message : 'Terjadi kendala saat menghubungkan ke Gemini.';
+        err instanceof Error ? err.message : 'Terjadi kendala saat menghubungkan ke TRIS.';
       setError(errorMessage);
     } finally {
       setIsLoading(false);
@@ -96,7 +96,7 @@ export const AiAssistant = () => {
       {
         role: 'assistant',
         content:
-          'Halo! Saya adalah **AI Digital Twin dari Triono Hidayat**, ditenagai oleh **Google Gemini 3.6 Flash**. Ada yang ingin Anda ketahui tentang keahlian sistem pemerintahan, automasi n8n, proyek web Next.js, atau ketersediaan kerja sama?',
+          'Halo! Saya adalah **TRIS** (*Triono Responsive Intelligence System*), asisten AI resmi yang mewakili Triono Hidayat. Ditenagai oleh **Google Gemini**, ada yang ingin Anda ketahui seputar arsitektur GovTech, automasi n8n, proyek web Next.js, atau peluang kerja sama?',
       },
     ]);
     setError(null);
@@ -105,8 +105,8 @@ export const AiAssistant = () => {
 
   return (
     <section
-      id="ai-twin"
-      className="py-16 sm:py-24 px-4 sm:px-6 relative isolate overflow-hidden w-full max-w-full"
+      id="tris"
+      className="pt-6 sm:pt-10 pb-16 sm:pb-24 px-4 sm:px-6 relative isolate overflow-hidden w-full max-w-full"
     >
       {/* Background Accent Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none -z-10" />
@@ -115,16 +115,16 @@ export const AiAssistant = () => {
         {/* Top Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono mb-4 shadow-lg shadow-blue-500/5">
           <Sparkles className="w-3.5 h-3.5 text-blue-400 animate-pulse" />
-          <span>Powered by Google Gemini 3.6 Flash</span>
+          <span>TRIS &bull; Powered by Google Gemini</span>
         </div>
 
         {/* Section Heading */}
         <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Ask My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-400">AI Digital Twin</span>
+          Ask <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-400">TRIS</span>
         </h2>
 
-        <p className="mt-3 text-xs sm:text-sm text-zinc-400 max-w-xl leading-relaxed">
-          Punya pertanyaan seputar arsitektur GovTech, automasi n8n, atau ingin mendiskusikan peluang kerja sama? Tanyakan langsung pada representasi AI saya.
+        <p className="mt-2.5 text-xs sm:text-sm text-zinc-400 max-w-xl leading-relaxed">
+          <span className="font-semibold text-zinc-300">Triono Responsive Intelligence System</span> &mdash; Tanyakan apa saja seputar arsitektur GovTech, automasi n8n, atau peluang kerja sama.
         </p>
 
         {/* Horizontal Suggestion Chips Container */}
@@ -154,10 +154,10 @@ export const AiAssistant = () => {
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-xs font-bold text-white tracking-tight">Triono AI Twin</span>
+                  <span className="text-xs font-bold text-white tracking-tight">TRIS</span>
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 </div>
-                <span className="text-[10px] text-zinc-400 font-mono">Gemini 3.6 Flash &bull; Knowledge Grounded</span>
+                <span className="text-[10px] text-zinc-400 font-mono">Triono Responsive Intelligence System &bull; Google Gemini</span>
               </div>
             </div>
 
