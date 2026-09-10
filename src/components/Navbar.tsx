@@ -14,7 +14,7 @@ import {
   Layers,
   History,
   GraduationCap,
-  Radio,
+  BookOpen,
 } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 
@@ -44,10 +44,11 @@ export const Navbar = () => {
 
   // Curated, high-impact navigation links
   const navLinks = [
-    { label: 'Services', href: '#services', icon: Layers },
-    { label: 'Projects', href: '#projects', icon: FolderGit2 },
-    { label: 'Experience', href: '#experience', icon: History },
-    { label: 'Credentials', href: '#education', icon: GraduationCap },
+    { label: 'Services', href: '/#services', icon: Layers },
+    { label: 'Projects', href: '/#projects', icon: FolderGit2 },
+    { label: 'Experience', href: '/#experience', icon: History },
+    { label: 'Credentials', href: '/#education', icon: GraduationCap },
+    { label: 'Blog', href: '/blog', icon: BookOpen },
     { label: 'Resume', href: '/resume', icon: FileText },
   ];
 
@@ -62,7 +63,7 @@ export const Navbar = () => {
           }`}
         >
           {/* Brand / Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2 group">
             <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:border-blue-400 transition-colors shrink-0">
               <Terminal className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
@@ -74,41 +75,32 @@ export const Navbar = () => {
                 Full-Stack &amp; Solutions Dev
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-1 bg-zinc-900/50 p-1 rounded-full border border-white/5">
             {navLinks.map((link) => {
-              const isInternal = link.href.startsWith('/');
-              return isInternal ? (
+              return (
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="px-4 py-1.5 text-xs font-medium text-zinc-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-200"
+                  className="px-3.5 py-1.5 text-xs font-medium text-zinc-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-200"
                 >
                   {link.label}
                 </Link>
-              ) : (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="px-4 py-1.5 text-xs font-medium text-zinc-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-200"
-                >
-                  {link.label}
-                </a>
               );
             })}
           </div>
 
           {/* Right Desktop CTA */}
           <div className="hidden sm:flex items-center gap-3">
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-lg shadow-blue-600/25 active:scale-95"
             >
               <span>Let&apos;s Talk</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Hamburger Toggle */}
@@ -165,17 +157,13 @@ export const Navbar = () => {
                 {/* Navigation Links */}
                 <div className="flex flex-col gap-1">
                   {navLinks.map((link) => {
-                    const isInternal = link.href.startsWith('/');
                     const Icon = link.icon;
-                    const linkClasses =
-                      'flex items-center justify-between px-3.5 py-2.5 text-sm font-medium text-zinc-200 hover:text-white hover:bg-white/10 rounded-xl transition-all active:scale-[0.99]';
-
-                    return isInternal ? (
+                    return (
                       <Link
                         key={link.label}
                         href={link.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className={linkClasses}
+                        className="flex items-center justify-between px-3.5 py-2.5 text-sm font-medium text-zinc-200 hover:text-white hover:bg-white/10 rounded-xl transition-all active:scale-[0.99]"
                       >
                         <div className="flex items-center gap-3">
                           <div className="w-7 h-7 rounded-lg bg-zinc-900 border border-white/10 flex items-center justify-center text-blue-400">
@@ -185,35 +173,20 @@ export const Navbar = () => {
                         </div>
                         <ArrowUpRight className="w-3.5 h-3.5 text-zinc-500" />
                       </Link>
-                    ) : (
-                      <a
-                        key={link.label}
-                        href={link.href}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className={linkClasses}
-                      >
-                        <div className="flex items-center gap-3">
-                          <div className="w-7 h-7 rounded-lg bg-zinc-900 border border-white/10 flex items-center justify-center text-blue-400">
-                            <Icon className="w-3.5 h-3.5" />
-                          </div>
-                          <span>{link.label}</span>
-                        </div>
-                        <ArrowUpRight className="w-3.5 h-3.5 text-zinc-500" />
-                      </a>
                     );
                   })}
                 </div>
 
                 {/* Direct Action Buttons inside Mobile Menu */}
                 <div className="pt-3 mt-1 border-t border-white/10 flex flex-col gap-2">
-                  <a
-                    href="#contact"
+                  <Link
+                    href="/#contact"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold transition-all shadow-lg shadow-blue-600/20 active:scale-[0.98]"
                   >
                     <span>Hire Me / Let&apos;s Talk</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
-                  </a>
+                  </Link>
 
                   <a
                     href={portfolioData.contacts.whatsappUrl}
