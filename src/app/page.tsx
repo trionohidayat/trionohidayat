@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Services } from '@/components/Services';
+import { AiAssistant } from '@/components/AiAssistant';
 import { Projects } from '@/components/Projects';
 import { GitHubActivity } from '@/components/GitHubActivity';
 import { Skills } from '@/components/Skills';
@@ -23,6 +24,9 @@ export default function Home() {
 
         {/* 4 Core Offerings */}
         <Services />
+
+        {/* AI Digital Twin (Powered by Google Gemini) */}
+        <AiAssistant />
 
         {/* Featured Case Studies with Category Filters */}
         <Projects />
