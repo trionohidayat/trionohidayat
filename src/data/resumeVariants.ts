@@ -170,8 +170,8 @@ export const resumeVariants: Record<ResumeVariantId, ResumeVariantData> = {
     ],
     featuredProjects: [
       {
-        title: 'Tok2Tube – Video Ingestion & Multi-Platform Pipeline',
-        category: 'Media Automation & Cloud Worker',
+        title: 'Tok2Tube',
+        category: 'Video Ingestion & Multi-Platform Pipeline',
         tech: 'Next.js 16 • TypeScript • Python • YouTube API v3 • FastAPI',
         description:
           'Architected an automated asynchronous pipeline leveraging Next.js, Python, YouTube Data API v3, and media processing workers to extract, optimize, and distribute video assets automatically.',
@@ -179,8 +179,8 @@ export const resumeVariants: Record<ResumeVariantId, ResumeVariantData> = {
         githubUrl: 'https://github.com/trionohidayat/tok2tube',
       },
       {
-        title: 'MentorHub – Collaborative Mentorship & Learning Platform',
-        category: 'Full-Stack EdTech SaaS',
+        title: 'MentorHub',
+        category: 'Collaborative Mentorship & Learning Platform',
         tech: 'Next.js 16 • TypeScript • React 19 • PostgreSQL • Prisma ORM',
         description:
           'Constructed a modern responsive web platform using Next.js, TypeScript, PostgreSQL, and Prisma ORM featuring real-time calendar session booking, competency roadmaps, and automated notifications.',
@@ -188,16 +188,16 @@ export const resumeVariants: Record<ResumeVariantId, ResumeVariantData> = {
         githubUrl: 'https://github.com/trionohidayat/mentorhub',
       },
       {
-        title: 'Slangio – Colloquial & Slang Lexicon Edge Service',
-        category: 'API & Linguistic Engine',
+        title: 'Slangio',
+        category: 'Colloquial & Slang Lexicon Edge Service',
         tech: 'Next.js Edge API • TypeScript • RESTful Architecture • Serverless JSON Cache',
         description:
           'Designed and deployed a high-performance serverless edge backend delivering sub-100ms RESTful linguistic query endpoints, structured slang definitions, and low-latency response times.',
         demoUrl: 'https://slangio-backend.vercel.app',
       },
       {
-        title: 'Nusataway – Island Tours & Travel Discovery Platform',
-        category: 'Travel & Tourism Tech',
+        title: 'Nusataway',
+        category: 'Island Tours & Travel Discovery Platform',
         tech: 'Next.js 16 • TypeScript • Tailwind CSS • SEO Engine • Edge Hosting',
         description:
           'Engineered a high-performance, mobile-first travel web application using Next.js with optimized PageSpeed, dynamic package filtering, and responsive direct booking inquiry flows.',

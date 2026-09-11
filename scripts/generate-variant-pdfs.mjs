@@ -41,15 +41,18 @@ function generateHtml(variantData) {
   const projectsHtml = featuredProjects
     .map(
       (proj) => `
-      <div class="entry">
+      <div class="entry" style="margin-bottom: 7px;">
         <div class="entry-header">
           <div>
-            <span class="entry-role">${proj.demoUrl ? `<a href="${proj.demoUrl}" style="color: inherit; text-decoration: none;">${proj.title}</a>` : proj.title}</span>
+            <span class="entry-role">${proj.demoUrl ? `<a href="${proj.demoUrl}" style="color: #0f172a; text-decoration: none;">${proj.title}</a>` : proj.title}</span>
             <span class="entry-company"> &bull; ${proj.category}</span>
           </div>
-          <span class="entry-date">${proj.tech}</span>
+          ${proj.demoUrl ? `<span class="entry-date"><a href="${proj.demoUrl}" style="color: #2563eb; text-decoration: none; font-size: 8.2pt; font-family: monospace;">${proj.demoUrl.replace('https://', '')} &nearr;</a></span>` : ''}
         </div>
-        <p class="summary" style="font-size: 8.8pt; margin-top: 2px;">
+        <div class="project-tech">
+          <strong style="color: #334155;">Tech:</strong> ${proj.tech}
+        </div>
+        <p class="summary" style="font-size: 8.8pt; margin-top: 1px;">
           ${proj.description}
         </p>
       </div>`
@@ -176,6 +179,13 @@ function generateHtml(variantData) {
       justify-content: space-between;
       align-items: baseline;
       margin-bottom: 1px;
+    }
+    .project-tech {
+      font-size: 8.2pt;
+      font-family: monospace, Courier, sans-serif;
+      color: #475569;
+      margin-top: 1px;
+      margin-bottom: 2px;
     }
     .entry-role {
       font-size: 9.4pt;

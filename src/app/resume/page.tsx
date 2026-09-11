@@ -165,6 +165,20 @@ const printStyles = `
     margin-bottom: 1px !important;
   }
 
+  .resume-project-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    margin-bottom: 1px !important;
+  }
+
+  .resume-project-tech {
+    font-size: 8.2pt !important;
+    font-family: monospace, Courier, sans-serif !important;
+    color: #475569 !important;
+    margin-bottom: 2px !important;
+  }
+
   .resume-entry-role {
     font-size: 9.4pt !important;
     font-weight: 700 !important;
@@ -406,25 +420,37 @@ function ResumeContent() {
           <div className="space-y-2.5">
             {currentVariant.featuredProjects.map((proj, idx) => (
               <div key={idx} className="resume-entry break-inside-avoid">
-                <div className="resume-entry-header flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
+                <div className="resume-project-header flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
                   <div>
                     {proj.demoUrl ? (
                       <a
                         href={proj.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="resume-entry-role font-bold text-zinc-950 text-xs hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                        className="resume-entry-role font-bold text-zinc-950 text-xs sm:text-[9.4pt] hover:text-blue-600 transition-colors"
                       >
-                        <span>{proj.title}</span>
+                        {proj.title}
                       </a>
                     ) : (
-                      <span className="resume-entry-role font-bold text-zinc-950 text-xs">{proj.title}</span>
+                      <span className="resume-entry-role font-bold text-zinc-950 text-xs sm:text-[9.4pt]">{proj.title}</span>
                     )}
-                    <span className="resume-entry-company text-blue-600 font-semibold text-xs"> &bull; {proj.category}</span>
+                    <span className="resume-entry-company text-blue-600 font-semibold text-xs sm:text-[9pt]"> &bull; {proj.category}</span>
                   </div>
-                  <span className="resume-entry-date text-[11px] text-zinc-500 font-mono">{proj.tech}</span>
+                  {proj.demoUrl && (
+                    <a
+                      href={proj.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="resume-entry-date text-[11px] font-mono text-blue-600 hover:underline shrink-0"
+                    >
+                      {proj.demoUrl.replace('https://', '')} &nearr;
+                    </a>
+                  )}
                 </div>
-                <p className="resume-summary text-xs text-zinc-700 mt-0.5">
+                <div className="resume-project-tech text-[11px] font-mono text-zinc-500 mt-0.5">
+                  <span className="font-semibold text-zinc-700">Tech:</span> {proj.tech}
+                </div>
+                <p className="resume-summary text-xs text-zinc-700 mt-0.5 leading-relaxed">
                   {proj.description}
                 </p>
               </div>
