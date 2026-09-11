@@ -1,9 +1,8 @@
 'use client';
 
 import React, { Suspense } from 'react';
-import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { Mail, Phone, MapPin, Printer, Download, ArrowLeft } from 'lucide-react';
+import { Mail, Phone, MapPin, Download } from 'lucide-react';
 import { LinkedInIcon, GitHubIcon } from '@/components/Icons';
 import { portfolioData } from '@/data/portfolio';
 import { resumeVariants, ResumeVariantId } from '@/data/resumeVariants';
@@ -252,38 +251,6 @@ function ResumeContent() {
       {/* Dynamic Print Styles matching PDF generator */}
       <style dangerouslySetInnerHTML={{ __html: printStyles }} />
 
-      {/* Clean Utility Bar (Non-Floating, Screen Only, Hidden on Print) */}
-      <div className="print-hide max-w-4xl mx-auto mb-4 sm:mb-6 flex items-center justify-between px-1">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-400 hover:text-white transition-colors"
-        >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          <span>Back to Portfolio</span>
-        </Link>
-
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => window.print()}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-white/10 text-xs font-medium transition-all active:scale-95 cursor-pointer shadow-sm"
-            title="Print Resume (A4)"
-          >
-            <Printer className="w-3.5 h-3.5 text-blue-400" />
-            <span>Print</span>
-          </button>
-
-          <a
-            href={`/resume/download?variant=${variantParam}`}
-            download
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-lg shadow-blue-600/20 transition-all active:scale-95"
-            title="Download PDF Document"
-          >
-            <Download className="w-3.5 h-3.5" />
-            <span>Download PDF</span>
-          </a>
-        </div>
-      </div>
-
       {/* Main Resume Paper Container */}
       <main className="resume-main-paper max-w-4xl mx-auto bg-white text-zinc-900 rounded-2xl shadow-2xl p-4 sm:p-12 text-xs sm:text-[9.6pt] leading-relaxed overflow-hidden">
         {/* Header */}
@@ -493,6 +460,19 @@ function ResumeContent() {
           </div>
         </section>
       </main>
+
+      {/* Floating Action Button (FAB) for Download PDF (Screen Only, Hidden on Print) */}
+      <aside aria-label="Resume Actions" className="print-hide fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50">
+        <a
+          href={`/resume/download?variant=${variantParam}`}
+          download
+          className="group flex items-center gap-2.5 px-4 py-3 sm:px-5 sm:py-3.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm shadow-2xl shadow-blue-600/40 hover:shadow-blue-500/60 border border-blue-400/30 transition-all duration-200 active:scale-95 cursor-pointer"
+          title="Download PDF"
+        >
+          <Download className="w-4 h-4 sm:w-4.5 sm:h-4.5 transition-transform group-hover:-translate-y-0.5" />
+          <span className="tracking-wide">Download PDF</span>
+        </a>
+      </aside>
     </div>
   );
 }
