@@ -443,7 +443,7 @@ function ResumeContent() {
                       rel="noopener noreferrer"
                       className="resume-entry-date text-[11px] font-mono text-blue-600 hover:underline shrink-0"
                     >
-                      {proj.demoUrl.replace('https://', '')} &nearr;
+                      {proj.demoUrl.replace('https://', '')} ↗
                     </a>
                   )}
                 </div>

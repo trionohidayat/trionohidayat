@@ -47,7 +47,7 @@ function generateHtml(variantData) {
             <span class="entry-role">${proj.demoUrl ? `<a href="${proj.demoUrl}" style="color: #0f172a; text-decoration: none;">${proj.title}</a>` : proj.title}</span>
             <span class="entry-company"> &bull; ${proj.category}</span>
           </div>
-          ${proj.demoUrl ? `<span class="entry-date"><a href="${proj.demoUrl}" style="color: #2563eb; text-decoration: none; font-size: 8.2pt; font-family: monospace;">${proj.demoUrl.replace('https://', '')} &nearr;</a></span>` : ''}
+          ${proj.demoUrl ? `<span class="entry-date"><a href="${proj.demoUrl}" style="color: #2563eb; text-decoration: none; font-size: 8.2pt; font-family: monospace;">${proj.demoUrl.replace('https://', '')} ↗</a></span>` : ''}
         </div>
         <div class="project-tech">
           <strong style="color: #334155;">Tech:</strong> ${proj.tech}
