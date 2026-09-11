@@ -16,6 +16,203 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'email-domain-gratis-tanpa-hosting-hostinger-improvmx-gmail',
+    title: 'Panduan Setup Email Domain Sendiri Tanpa Sewa Hosting: Hostinger, ImprovMX, dan Gmail',
+    excerpt:
+      'Beli domain tanpa langganan email hosting bulanan? Pelajari cara kerja email forwarding dengan ImprovMX, konfigurasi DNS di Hostinger, dan trik SMTP gratis agar bisa kirim & terima email langsung dari Gmail.',
+    date: '2026-09-11',
+    readTime: '6 min read',
+    category: 'Web Engineering',
+    tags: ['Custom Domain', 'DNS', 'Hostinger', 'ImprovMX', 'Email Architecture', 'SMTP'],
+    featured: true,
+    author: {
+      name: 'Triono Hidayat',
+      role: 'Enterprise Systems Governance & Solutions Dev',
+    },
+    content: `
+## Mitos: Punya Email Domain Harus Beli Hosting Mahal?
+
+Banyak pengguna yang baru pertama kali membeli nama domain (misalnya di Hostinger, GoDaddy, atau Namecheap) merasa kaget ketika mengetahui bahwa **membeli domain saja belum otomatis memberi kotak masuk (inbox) email**.
+
+Biasanya, penyedia domain akan langsung menawarkan paket tambahan:
+- *Email Hosting Titan / Webmail*: Rp 15.000 - Rp 30.000 / bulan / akun.
+- *Google Workspace (Gmail Domain)*: Sekitar Rp 100.000 / bulan / akun.
+- *Microsoft 365*: Mulai dari Rp 90.000 / bulan / akun.
+
+Untuk perusahaan skala enterprise atau instansi pemerintahan, biaya langganan tersebut tentu wajar demi jaminan SLA dan kepatuhan regulasi. Namun untuk **kebutuhan personal, freelancer, portofolio developer, atau UMKM tahap awal**, biaya bulanan berulang ini sering kali menjadi beban yang tidak efisien.
+
+Pertanyaannya: **Bisakah kita memiliki email dengan domain kustom (misal: \`halo@domainkamu.com\`) tanpa membayar biaya hosting email sama sekali?**
+
+Jawabannya: **Bisa.** Kuncinya terletak pada pemahaman arsitektur DNS, pemisahan fungsi *receiving* (penerimaan) dan *sending* (pengiriman), serta pemanfaatan layanan *email forwarding* seperti ImprovMX.
+
+---
+
+## Memahami Arsitektur: Domain vs Mail Server
+
+Sebelum masuk ke konfigurasi teknis, mari pahami konsep dasarnya. Domain pada dasarnya adalah sistem penamaan (DNS) yang memetakan nama ke alamat IP atau server tujuan.
+
+Domain **tidak memiliki penyimpanan fisik** untuk menampung berkas pesan email Anda.
+
+Untuk menjalankan siklus komunikasi email secara penuh, ada dua subsistem yang bekerja:
+
+1. **Inbound (Menerima Pesan):** Diatur oleh DNS **MX Record (Mail Exchange)**. Rekam DNS ini memberi tahu server pengirim di internet: *"Jika ada email untuk domain ini, kirimkan suratnya ke server X."*
+2. **Outbound (Mengirim Pesan):** Ditangani oleh protokol **SMTP (Simple Mail Transfer Protocol)** yang dilengkapi verifikasi identitas (SPF, DKIM, dan DMARC) untuk membuktikan bahwa email tersebut bukan spam atau pemalsuan identitas (*spoofing*).
+
+\`\`\`
+[Pengirim Email Luar]
+        │
+        ▼ (MX Record)
+┌─────────────────────────┐
+│   ImprovMX Forwarder    │ (Menerima secara instan)
+└─────────────────────────┘
+        │
+        ▼ (Forward via SMTP)
+[Inbox Gmail Pribadi Anda] ───► Anda membaca email masuk
+        │
+        ▼ (Send Mail As)
+┌─────────────────────────┐
+│   SMTP Relay (Brevo)    │ (Mengirim dengan DKIM/SPF domain Anda)
+└─────────────────────────┘
+        │
+        ▼
+[Penerima Email Tujuan]
+\`\`\`
+
+Dengan skema di atas:
+- **Penerimaan email:** Ditangani gratis oleh ImprovMX lalu diteruskan langsung ke Gmail pribadi.
+- **Penyimpanan inbox:** Memanfaatkan kapasitas 15 GB gratis milik akun Google pribadi Anda.
+- **Pengiriman email:** Menggunakan fitur *Send mail as* di Gmail yang dialirkan melalui server SMTP gratisan.
+
+---
+
+## Langkah 1: Membeli Domain di Hostinger
+
+Langkah pertama adalah memiliki nama domain aktif:
+
+1. Kunjungi situs resmi **Hostinger** dan cari nama domain yang Anda inginkan (misalnya \`.com\`, \`.id\`, atau \`.my.id\`).
+2. Saat berada di halaman keranjang belanja (*checkout*), **lewati atau hilangkan centang pada penawaran tambahan** seperti *Business Email Hosting*, *Web Hosting*, atau paket berbayar lainnya.
+3. Selesaikan pembayaran hingga domain resmi aktif di dashboard Hostinger Anda.
+
+> **Catatan:** Anda hanya perlu status domain aktif. Kita akan memanfaatkan fitur pengelolaan DNS Zone bawaan Hostinger yang sudah tersedia tanpa biaya tambahan.
+
+---
+
+## Langkah 2: Pendaftaran di ImprovMX
+
+ImprovMX adalah layanan *email forwarding* yang sangat andal dan menyediakan paket gratis (*Free Plan*):
+
+1. Buka situs **ImprovMX.com**.
+2. Masukkan nama domain Anda (misal: \`domainkamu.com\`) dan alamat email tujuan (misal: akun Gmail pribadi Anda \`namakamu@gmail.com\`).
+3. Tentukan alias yang diinginkan:
+- \`kontak@domainkamu.com\` diteruskan ke \`namakamu@gmail.com\`
+- Atau gunakan *catch-all rule* (\`*@domainkamu.com\`) sehingga alamat apa pun yang dikirim ke domain Anda akan masuk ke satu inbox Gmail.
+4. ImprovMX akan menampilkan instruksi konfigurasi DNS yang harus dimasukkan ke registrar domain Anda.
+
+---
+
+## Langkah 3: Konfigurasi DNS Zone di Hostinger
+
+Kembali ke dashboard Hostinger Anda:
+
+1. Buka menu **Domains** > Pilih domain Anda > Masuk ke tab **DNS / Nameservers** (atau **DNS Zone**).
+2. Hapus MX Record lama jika ada bawaan default yang tidak digunakan.
+3. Tambahkan **2 MX Records** dari ImprovMX:
+
+\`\`\`dns
+Type: MX | Name: @ | Mail Server: mx1.improvmx.com | Priority: 10
+Type: MX | Name: @ | Mail Server: mx2.improvmx.com | Priority: 20
+\`\`\`
+
+4. Tambahkan **1 TXT Record** untuk otentikasi SPF (Sender Policy Framework):
+
+\`\`\`dns
+Type: TXT | Name: @ | Value: v=spf1 include:spf.improvmx.com ~all | TTL: 3600
+\`\`\`
+
+Setelah disimpan, kembali ke dashboard ImprovMX dan klik tombol **Check DNS Settings**. Jika statusnya berubah menjadi hijau (*Email forwarding active*), Anda sudah berhasil!
+
+Cobalah kirim email uji coba dari akun lain ke \`kontak@domainkamu.com\`. Pesan tersebut akan langsung mendarat di inbox Gmail Anda dalam hitungan detik.
+
+---
+
+## Langkah 4: Jebakan "Kirim Email" & Solusi SMTP Gratis
+
+Di tahap ini, Anda sudah bisa **menerima email secara gratis tanpa batas**.
+
+Namun, muncul kendala baru ketika Anda ingin **membalas atau mengirim email baru**:
+- ImprovMX versi gratis **hanya menyediakan forwarding (inbound)**. Fitur server pengiriman (SMTP outbound) di ImprovMX berbayar.
+- Jika Anda langsung membalas dari Gmail biasa, penerima akan melihat alamat \`namakamu@gmail.com\`, bukan email domain kustom Anda.
+
+### Solusi Gratis: Gunakan SMTP Relay Pihak Ketiga (Brevo / Resend)
+Untuk mengirim email resmi atas nama domain secara cuma-cuma, kita bisa memanfaatkan penyedia SMTP transaksional gratis:
+
+1. **Daftar Akun Brevo (dulu Sendinblue):**
+- Paket gratis Brevo memberikan kuota **300 email per hari**. Ini lebih dari cukup untuk korespondensi personal atau portofolio.
+2. **Tambahkan Domain Anda di Brevo:**
+- Masuk ke menu *Senders, Domains & Dedicated IPs* > Tambahkan domain Anda.
+- Brevo akan meminta Anda memasukkan record TXT (DKIM key) di DNS Hostinger untuk memvalidasi bahwa Anda adalah pemilik sah domain tersebut.
+3. **Dapatkan Kredensial SMTP:**
+- Masuk ke menu *SMTP & API* di Brevo.
+- Catat detail SMTP:
+- **SMTP Server:** \`smtp-relay.brevo.com\`
+- **Port:** \`587\` (TLS)
+- **Login / Username:** Email akun Brevo Anda
+- **Master Password / SMTP Key:** Kunci rahasia yang digenerate di Brevo
+
+---
+
+## Langkah 5: Konfigurasi "Send Mail As" di Akun Gmail
+
+Langkah pamungkas adalah menghubungkan server SMTP tersebut ke antarmuka Gmail pribadi Anda:
+
+1. Buka Gmail di browser desktop, lalu klik ikon gerigi **Settings (Setelan)** > **See all settings (Lihat semua setelan)**.
+2. Pilih tab **Accounts and Import (Akun dan Impor)**.
+3. Pada bagian **Send mail as (Kirim email sebagai)**, klik **Add another email address (Tambahkan alamat email lain)**.
+4. Pada jendela pop-up:
+- **Name:** Nama lengkap atau nama brand Anda (misal: *Triono Hidayat*).
+- **Email address:** Alamat email domain Anda (misal: *kontak@domainkamu.com*).
+- Pastikan opsi *Treat as an alias* tetap tercentang.
+- Klik **Next Step**.
+5. Masukkan konfigurasi SMTP Brevo:
+- **SMTP Server:** \`smtp-relay.brevo.com\`
+- **Port:** \`587\`
+- **Username:** Username login Brevo Anda
+- **Password:** SMTP Key yang Anda buat di Brevo
+- Pilih opsi koneksi aman: **Secured connection using TLS**.
+- Klik **Add Account**.
+6. Google akan mengirimkan kode konfirmasi ke \`kontak@domainkamu.com\`. Karena ImprovMX sudah aktif, kode tersebut otomatis masuk ke inbox Gmail Anda!
+7. Salin kode konfirmasi dan tempelkan ke jendela verifikasi.
+
+Selamat! Sekarang saat Anda membuat email baru (*Compose*) di Gmail, Anda memiliki opsi *dropdown* di kolom **From (Dari)** untuk memilih apakah ingin mengirim sebagai email Gmail biasa atau sebagai email domain kustom Anda.
+
+---
+
+## Praktik Keamanan Email: Menghindari Folder Spam
+
+Agar email yang Anda kirim tidak dianggap spam oleh server penerima (seperti Outlook atau Google), pastikan DNS TXT SPF Anda mencakup kedua layanan:
+
+\`\`\`dns
+Type: TXT | Name: @ | Value: v=spf1 include:spf.improvmx.com include:spf.brevo.com ~all
+\`\`\`
+
+Dengan menggabungkan parameter SPF dan memasang DKIM dari Brevo, tingkat keterkiriman (*deliverability rate*) email domain Anda akan setara dengan email berbayar.
+
+---
+
+## Kesimpulan
+
+Membangun kredibilitas profesional lewat email domain sendiri **tidak selalu harus mengeluarkan biaya langganan bulanan**.
+
+Dengan alur:
+1. **Domain:** Hostinger (hanya bayar sewa nama tahunan).
+2. **Penerima:** ImprovMX (meneruskan email secara instan & gratis).
+3. **Kotak Masuk:** Akun Gmail pribadi (kapasitas 15GB).
+4. **Pengirim:** Brevo SMTP Relay (gratis 300 email/hari).
+
+Anda mendapatkan ekosistem email domain yang fungsional, profesional, aman, dan **100% bebas biaya operasional hosting**.
+    `.trim(),
+  },
+  {
     slug: 'arsitektur-automasi-n8n-layanan-publik',
     title: 'Arsitektur Sistem Automasi Workflow n8n untuk Skalabilitas Layanan Publik',
     excerpt:
