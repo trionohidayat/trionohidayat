@@ -408,7 +408,18 @@ function ResumeContent() {
               <div key={idx} className="resume-entry break-inside-avoid">
                 <div className="resume-entry-header flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
                   <div>
-                    <span className="resume-entry-role font-bold text-zinc-950 text-xs">{proj.title}</span>
+                    {proj.demoUrl ? (
+                      <a
+                        href={proj.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="resume-entry-role font-bold text-zinc-950 text-xs hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                      >
+                        <span>{proj.title}</span>
+                      </a>
+                    ) : (
+                      <span className="resume-entry-role font-bold text-zinc-950 text-xs">{proj.title}</span>
+                    )}
                     <span className="resume-entry-company text-blue-600 font-semibold text-xs"> &bull; {proj.category}</span>
                   </div>
                   <span className="resume-entry-date text-[11px] text-zinc-500 font-mono">{proj.tech}</span>

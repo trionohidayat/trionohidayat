@@ -5,6 +5,8 @@ export interface ResumeProject {
   category: string;
   tech: string;
   description: string;
+  demoUrl?: string;
+  githubUrl?: string;
 }
 
 export interface ResumeSkillGroup {
@@ -168,25 +170,39 @@ export const resumeVariants: Record<ResumeVariantId, ResumeVariantData> = {
     ],
     featuredProjects: [
       {
-        title: 'Cloud Operations & High-Throughput Data Platform',
-        category: 'Full-Stack Web & SaaS',
-        tech: 'Next.js 16 • TypeScript • React 19 • Prisma ORM • PostgreSQL • Tailwind CSS v4',
+        title: 'Tok2Tube – Video Ingestion & Multi-Platform Pipeline',
+        category: 'Media Automation & Cloud Worker',
+        tech: 'Next.js 16 • TypeScript • Python • YouTube API v3 • FastAPI',
         description:
-          'Constructed a modern, type-safe management platform featuring server-side rendering (SSR), edge caching, and automated database migrations. Achieved sub-second query latency across complex relational data structures.',
+          'Architected an automated asynchronous pipeline leveraging Next.js, Python, YouTube Data API v3, and media processing workers to extract, optimize, and distribute video assets automatically.',
+        demoUrl: 'https://tok2tube.vercel.app',
+        githubUrl: 'https://github.com/trionohidayat/tok2tube',
       },
       {
-        title: 'GovTech Enterprise Process Digitization & Data Pipeline',
-        category: 'Data Engineering & API Integration',
-        tech: 'TypeScript • PostgreSQL • REST APIs • n8n • Python • Webhooks',
+        title: 'MentorHub – Collaborative Mentorship & Learning Platform',
+        category: 'Full-Stack EdTech SaaS',
+        tech: 'Next.js 16 • TypeScript • React 19 • PostgreSQL • Prisma ORM',
         description:
-          'Engineered end-to-end data synchronization pipelines and API connectors eliminating manual paperwork across government work units. Automated cross-directorate data validation and report aggregation.',
+          'Constructed a modern responsive web platform using Next.js, TypeScript, PostgreSQL, and Prisma ORM featuring real-time calendar session booking, competency roadmaps, and automated notifications.',
+        demoUrl: 'https://mentorhub-puce.vercel.app',
+        githubUrl: 'https://github.com/trionohidayat/mentorhub',
       },
       {
-        title: 'Enterprise WMS Client-Server Architecture',
-        category: 'Distributed Systems',
-        tech: 'Next.js • PostgreSQL • Android Kotlin • Room DB • RESTful APIs',
+        title: 'Slangio – Colloquial & Slang Lexicon Edge Service',
+        category: 'API & Linguistic Engine',
+        tech: 'Next.js Edge API • TypeScript • RESTful Architecture • Serverless JSON Cache',
         description:
-          'Engineered an enterprise warehouse management system bridging handheld scanner clients with central databases via high-throughput REST APIs and offline-first caching.',
+          'Designed and deployed a high-performance serverless edge backend delivering sub-100ms RESTful linguistic query endpoints, structured slang definitions, and low-latency response times.',
+        demoUrl: 'https://slangio-backend.vercel.app',
+      },
+      {
+        title: 'Nusataway – Island Tours & Travel Discovery Platform',
+        category: 'Travel & Tourism Tech',
+        tech: 'Next.js 16 • TypeScript • Tailwind CSS • SEO Engine • Edge Hosting',
+        description:
+          'Engineered a high-performance, mobile-first travel web application using Next.js with optimized PageSpeed, dynamic package filtering, and responsive direct booking inquiry flows.',
+        demoUrl: 'https://nusataway.vercel.app',
+        githubUrl: 'https://github.com/trionohidayat/nusataway',
       },
     ],
     certificationsHighlight: [

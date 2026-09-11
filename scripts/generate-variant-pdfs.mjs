@@ -44,7 +44,7 @@ function generateHtml(variantData) {
       <div class="entry">
         <div class="entry-header">
           <div>
-            <span class="entry-role">${proj.title}</span>
+            <span class="entry-role">${proj.demoUrl ? `<a href="${proj.demoUrl}" style="color: inherit; text-decoration: none;">${proj.title}</a>` : proj.title}</span>
             <span class="entry-company"> &bull; ${proj.category}</span>
           </div>
           <span class="entry-date">${proj.tech}</span>
