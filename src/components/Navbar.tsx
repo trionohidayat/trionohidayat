@@ -49,7 +49,6 @@ export const Navbar = () => {
     { label: 'Experience', href: '/#experience', icon: History },
     { label: 'Credentials', href: '/#education', icon: GraduationCap },
     { label: 'Blog', href: '/blog', icon: BookOpen },
-    { label: 'Resume', href: '/resume', icon: FileText },
   ];
 
   return (
@@ -179,6 +178,15 @@ export const Navbar = () => {
 
                 {/* Direct Action Buttons inside Mobile Menu */}
                 <div className="pt-3 mt-1 border-t border-white/10 flex flex-col gap-2">
+                  <Link
+                    href="/resume"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 border border-white/10 text-xs font-semibold transition-all active:scale-[0.98]"
+                  >
+                    <FileText className="w-3.5 h-3.5 text-blue-400" />
+                    <span>View CV / Resume</span>
+                  </Link>
+
                   <Link
                     href="/#contact"
                     onClick={() => setMobileMenuOpen(false)}

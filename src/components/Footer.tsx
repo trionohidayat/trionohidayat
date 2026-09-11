@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ArrowUp, Terminal } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowUp, Terminal, FileText } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 
 export const Footer = () => {
@@ -80,7 +81,14 @@ export const Footer = () => {
         </p>
 
         {/* Right Info & Back to Top */}
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+          <Link
+            href="/resume"
+            className="text-xs text-zinc-400 hover:text-white transition-colors flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900/60 border border-white/5 hover:border-white/10"
+          >
+            <FileText className="w-3.5 h-3.5 text-blue-400" />
+            <span>Resume / CV</span>
+          </Link>
           <span className="text-xs text-zinc-400">
             &copy; {currentYear} {portfolioData.personal.name}
           </span>

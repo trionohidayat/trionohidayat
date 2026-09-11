@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'motion/react';
-import { Calendar, MapPin, CheckCircle } from 'lucide-react';
+import { Calendar, MapPin, CheckCircle, FileText, ArrowRight } from 'lucide-react';
 import { portfolioData, ExperienceItem } from '@/data/portfolio';
 
 export const Experience = () => {
@@ -82,6 +83,18 @@ export const Experience = () => {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Full Resume CTA Callout */}
+        <div className="mt-10 sm:mt-14 text-center">
+          <Link
+            href="/resume"
+            className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl bg-zinc-900/80 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-white/10 hover:border-blue-500/40 text-xs sm:text-sm font-semibold transition-all group shadow-lg shadow-black/40 active:scale-[0.98]"
+          >
+            <FileText className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" />
+            <span>Looking for full career details? View Complete Resume &amp; PDF</span>
+            <ArrowRight className="w-4 h-4 text-zinc-500 group-hover:text-blue-400 group-hover:translate-x-0.5 transition-all" />
+          </Link>
         </div>
       </div>
     </section>
