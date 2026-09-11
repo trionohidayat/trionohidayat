@@ -11,7 +11,7 @@ Triono Hidayat is an Indonesian software engineer, IT Systems Officer, and solut
 - Complete Profile: https://trionohidayat.my.id/llms-full.txt
 
 ## Core Competencies
-- Full-Stack Web Development: Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, Prisma ORM, PostgreSQL, Server-Side Rendering (SSR).
+- Full-Stack Web Development: Next.js 16 (App Router), React 19, TypeScript, PHP (Laravel / CodeIgniter), Tailwind CSS v4, Prisma ORM, PostgreSQL, MySQL, Server-Side Rendering (SSR).
 - Workflow Automation & AI: n8n (Self-hosted & Cloud), AI Agents, REST APIs, Webhooks, Data Pipelines, Process Digitization.
 - Mobile & Hardware Systems: Native Android (Kotlin & Java, MVVM, Room DB), RFID (HF/UHF), Barcode Scanners, NFC, IoT.
 - Enterprise Systems & Leadership: IT Project Management (Agile, Jira), GovTech Information Systems, Warehouse Management Systems (WMS), Technical Documentation & SOPs.
@@ -22,7 +22,7 @@ Triono Hidayat is an Indonesian software engineer, IT Systems Officer, and solut
 - Head of Software Department at PT Wahana Datarindo Sempurna (June 2023 – June 2025)
 - Android Developer at PT Wahana Datarindo Sempurna (July 2022 – June 2023)
 - Android Developer at PT Satria Antaran Prima Tbk. (SAP Express) (Jan 2022 – June 2022)
-- Web Developer at Rumah Sakit Pamanukan Medical Center (Nov 2021 – Jan 2022)
+- Web Developer (SIMRS, PHP & MySQL) at Rumah Sakit Pamanukan Medical Center (Nov 2021 – Jan 2022)
 - WordPress Developer at PT Spekta Cipta Interusa (March 2020 – Oct 2021)
 - IT Support & Network Technician at Kantor Camat Tanjung Pandan (July 2015 – Sept 2015)
 

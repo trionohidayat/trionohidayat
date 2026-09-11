@@ -140,6 +140,7 @@ Guiding digital initiatives from initial technical proposals and PoC to deployme
 - TypeScript, JavaScript (ESNext)
 - Next.js 16 (App Router, Server Actions, SSR, SSG)
 - React 19, React Hooks
+- PHP (Laravel, CodeIgniter 3)
 - Tailwind CSS v4, Motion (Framer Motion)
 - Prisma ORM, PostgreSQL, MySQL
 - RESTful APIs, Next.js Edge Runtime, Serverless
@@ -217,12 +218,12 @@ Guiding digital initiatives from initial technical proposals and PoC to deployme
   * Enforced robust authentication and transaction security protocols for digital financial modules.
 
 ### 6. Rumah Sakit Pamanukan Medical Center
-- Role: Web Developer
+- Role: Web Developer (SIMRS)
 - Period: November 2021 – January 2022
 - Location: Subang, West Java, Indonesia
 - Key Responsibilities:
-  * Developed web modules for the Hospital Management Information System (SIMRS), streamlining clinical workflows and patient administration.
-  * Optimized database query performance and implemented secure role-based data access for medical records.
+  * Developed web modules for the Hospital Management Information System (SIMRS) using PHP (CodeIgniter 3) and MySQL, streamlining clinical workflows and patient administration.
+  * Optimized MySQL database query performance and implemented secure role-based data access for medical records.
 
 ### 7. PT Spekta Cipta Interusa
 - Role: WordPress Developer

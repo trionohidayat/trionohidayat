@@ -280,9 +280,10 @@ export const portfolioData = {
       skills: [
         { name: "TypeScript" },
         { name: "Full-Stack Development" },
-        { name: "Prisma ORM" },
+        { name: "PHP & Laravel" },
         { name: "Next.js 16 (App Router)" },
         { name: "React 19" },
+        { name: "Prisma ORM" },
         { name: "Tailwind CSS v4" },
       ],
     },
@@ -401,11 +402,11 @@ export const portfolioData = {
       organization: "Rumah Sakit Pamanukan Medical Center",
       location: "Subang, Jawa Barat, Indonesia",
       description: [
-        "Mengembangkan dan mengelola modul aplikasi Sistem Informasi Manajemen Rumah Sakit (SIMRS) untuk mendigitalisasi alur pelayanan medis serta administrasi pasien.",
+        "Mengembangkan dan mengelola modul aplikasi Sistem Informasi Manajemen Rumah Sakit (SIMRS) berbasis PHP (CodeIgniter 3) dan database MySQL untuk mendigitalisasi alur pelayanan medis serta administrasi pasien.",
         "Merancang antarmuka web yang responsif dan mengoptimalkan integrasi basis data untuk pencatatan rekam medis yang cepat, akurat, dan terstruktur.",
-        "Menjaga keandalan sistem, efisiensi query basis data, serta penerapan kontrol hak akses guna melindungi kerahasiaan data rekam medis pasien.",
+        "Menjaga keandalan sistem, efisiensi query MySQL, serta penerapan kontrol hak akses guna melindungi kerahasiaan data rekam medis pasien.",
       ],
-      tags: ["Web Development", "SIMRS", "Healthcare Systems", "Database Management", "Web Application"],
+      tags: ["PHP", "CodeIgniter 3", "MySQL", "SIMRS", "Healthcare IT"],
     },
     {
       period: "Maret 2020 – Oktober 2021",

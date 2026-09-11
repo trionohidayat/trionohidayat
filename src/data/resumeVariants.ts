@@ -49,7 +49,7 @@ export const resumeVariants: Record<ResumeVariantId, ResumeVariantData> = {
     competencies: [
       {
         label: 'Full-Stack & Web',
-        skills: 'TypeScript, JavaScript (ESNext), Next.js 16 (App Router), React 19, Tailwind CSS v4, Node.js, Express, RESTful APIs, Server Actions, SSR/SSG',
+        skills: 'TypeScript, JavaScript (ESNext), Next.js 16 (App Router), React 19, PHP (Laravel / CodeIgniter), Tailwind CSS v4, Node.js, Express, RESTful APIs, Server Actions, SSR/SSG',
       },
       {
         label: 'Database & ORM',
@@ -124,11 +124,11 @@ export const resumeVariants: Record<ResumeVariantId, ResumeVariantData> = {
         period: 'Nov 2021 – Jan 2022',
         location: 'Subang, West Java, Indonesia',
         description: [
-          'Engineered core web modules for the Hospital Management Information System (SIMRS), digitalizing healthcare workflows and patient administration.',
+          'Engineered core web modules for the Hospital Management Information System (SIMRS) using PHP (CodeIgniter 3) and MySQL, digitalizing healthcare workflows and patient administration.',
           'Developed responsive web interfaces and optimized relational database queries to accelerate medical record processing and patient data retrieval.',
           'Maintained stringent role-based data security and access controls in compliance with health information privacy standards.',
         ],
-        tags: ['Web Development', 'SIMRS', 'Healthcare IT', 'Database Systems', 'Full-Stack Web'],
+        tags: ['PHP', 'CodeIgniter 3', 'MySQL', 'SIMRS', 'Healthcare IT'],
       },
       {
         role: 'Full-Stack & Web Developer',

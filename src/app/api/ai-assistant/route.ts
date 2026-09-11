@@ -22,7 +22,7 @@ PROFIL SINGKAT TRIONO HIDAYAT:
 
 KEAHLIAN UTAMA:
 1. Workflow Automation & AI: n8n (Self-Hosted & Cloud), Webhook Pipelines, Integrasi AI Agent, Zapier, Make.
-2. Web Engineering: Next.js (App Router, React 19), TypeScript, Tailwind CSS v4, Node.js, Express, REST APIs, PostgreSQL.
+2. Web Engineering: Next.js (App Router, React 19), TypeScript, PHP (Laravel & CodeIgniter), Tailwind CSS v4, Node.js, Express, REST APIs, PostgreSQL, MySQL.
 3. GovTech & Enterprise Systems: Tata Kelola Sistem Informasi, Digitalisasi Birokrasi, Audit Trail, RBAC granular, Kepatuhan Regulasi Data.
 4. Mobile & IoT/Logistics: Native Android (Kotlin/Java), RFID Integration, Warehouse Management Systems (WMS).
 
@@ -180,6 +180,23 @@ Keahlian automasinya mencakup:
 - Integrasi bot notifikasi multi-kanal (WhatsApp, Telegram, Email) dan generasi berkas PDF otomatis.
 
 Tertarik mengotomasi sistem operasional Anda? Hubungi langsung via WhatsApp: [${portfolioData.contacts.whatsappNumber}](${portfolioData.contacts.whatsappUrl}).`;
+  }
+
+  if (
+    q.includes('php') ||
+    q.includes('laravel') ||
+    q.includes('codeigniter') ||
+    q.includes('ci3')
+  ) {
+    return `Ya, Triono memiliki pengalaman luas dalam rekayasa backend berbasis **PHP (Laravel & CodeIgniter)** dan database **MySQL**.
+
+Rekam jejak dan kompetensinya meliputi:
+- **Pengembangan Web Modern**: Menguasai **Laravel** untuk arsitektur MVC, RESTful API, ORM Eloquent, dan integrasi backend modern yang terstruktur serta aman.
+- **Sistem Informasi Manajemen Rumah Sakit (SIMRS)**: Membangun modul SIMRS berbasis **PHP (CodeIgniter 3)** dan database **MySQL** di Rumah Sakit Pamanukan Medical Center.
+- **Content Management Systems**: Pengalaman mengoptimalkan performa, caching, dan keamanan platform berbasis WordPress & PHP di PT Spekta Cipta Interusa.
+- **Evolusi & Modernisasi**: Kemampuan menghubungkan atau memigrasikan sistem legacy PHP/MySQL ke ekosistem modern berbasis Next.js 16, TypeScript, dan PostgreSQL.
+
+Tertarik mendiskusikan kerja sama atau proyek pengembangan? Hubungi langsung via WhatsApp: [${portfolioData.contacts.whatsappNumber}](${portfolioData.contacts.whatsappUrl}).`;
   }
 
   if (
