@@ -108,6 +108,18 @@ export const resumeVariants: Record<ResumeVariantId, ResumeVariantData> = {
         tags: ['System Architecture', 'Software Leadership', 'PostgreSQL', 'Client-Server Systems', 'Tender Delivery'],
       },
       {
+        role: 'Android Developer (WMS & RFID Hardware Integration)',
+        organization: 'PT Wahana Datarindo Sempurna',
+        period: 'July 2022 – June 2023',
+        location: 'South Jakarta, Indonesia',
+        description: [
+          'Engineered native Android Warehouse Management System (WMS) client applications deployed on industrial rugged handheld devices across major enterprise logistics facilities.',
+          'Integrated hardware vendor SDKs for UHF/HF RFID tag reading and laser barcode scanning, ensuring sub-50ms scanning response times in high-volume environments.',
+          'Designed a resilient offline-first architecture utilizing Room Database (SQLite) and background synchronization via REST APIs, eliminating data loss during warehouse dead-zones.',
+        ],
+        tags: ['Android Kotlin', 'MVVM', 'Room DB', 'RFID HF/UHF SDK', 'Offline-First', 'WMS'],
+      },
+      {
         role: 'Android Developer (Logistics & Digital Wallet)',
         organization: 'PT Satria Antaran Prima Tbk. (SAP Express)',
         period: 'Jan 2022 – June 2022',
@@ -140,6 +152,18 @@ export const resumeVariants: Record<ResumeVariantId, ResumeVariantData> = {
           'Engineered hardened user authentication, RBAC (role-based access control), and automated backup recovery pipelines.',
         ],
         tags: ['Full-Stack Web', 'CDN Edge Caching', 'Database Optimization', 'Web Security'],
+      },
+      {
+        role: 'IT Support & Network Technician (Internship)',
+        organization: 'Kantor Camat Tanjung Pandan',
+        period: 'July 2015 – Sept 2015',
+        location: 'Belitung, Bangka Belitung, Indonesia',
+        description: [
+          'Designed and deployed local area network (LAN & Wi-Fi) infrastructure across office work units, establishing stable internet connectivity for sub-district government operations.',
+          'Installed and configured network hardware including routers, access points, network switches, UTP cabling (crimping RJ45), and local IP address distribution.',
+          'Provided front-line technical support, hardware troubleshooting (PCs, laptops, printers), and operating system maintenance for government personnel.',
+        ],
+        tags: ['IT Support', 'Network Infrastructure', 'LAN / Wi-Fi', 'Hardware Troubleshooting', 'System Maintenance'],
       },
     ],
     featuredProjects: [
