@@ -180,20 +180,15 @@ const TextSection: React.FC<{ text: string }> = ({ text }) => {
   return <>{elements}</>;
 };
 
-// Helper for inline markdown: bold (**), inline code (`), and links ([text](url))
+// Helper for inline markdown: bold (***, **), italic (*, _), inline code (`), and links ([text](url))
 function renderInline(text: string): React.ReactNode {
-  // Regex to match bold, inline code, and links
-  const regex = /(\*\*.*?\*\*|`.*?`|\[.*?\]\(.*?\))/g;
+  // Regex to match inline elements without inner capturing groups
+  const regex = /(`.*?`|\[.*?\]\(.*?\)|\*\*\*.*?\*\*\*|\*\*.*?\*\*|\*(?!\s)[^*\n]+?(?<!\s)\*|__.*?__|_(?!\s)[^_\n]+?(?<!\s)_)/g;
   const parts = text.split(regex);
 
   return parts.map((part, i) => {
-    if (part.startsWith('**') && part.endsWith('**')) {
-      return (
-        <strong key={i} className="font-semibold text-white">
-          {part.slice(2, -2)}
-        </strong>
-      );
-    }
+    if (!part) return null;
+
     if (part.startsWith('`') && part.endsWith('`')) {
       return (
         <code
@@ -204,6 +199,7 @@ function renderInline(text: string): React.ReactNode {
         </code>
       );
     }
+
     if (part.startsWith('[') && part.includes('](') && part.endsWith(')')) {
       const match = part.match(/\[(.*?)\]\((.*?)\)/);
       if (match) {
@@ -220,6 +216,37 @@ function renderInline(text: string): React.ReactNode {
         );
       }
     }
+
+    if (part.startsWith('***') && part.endsWith('***') && part.length >= 6) {
+      return (
+        <strong key={i} className="font-semibold text-white">
+          <em className="italic text-zinc-200">{part.slice(3, -3)}</em>
+        </strong>
+      );
+    }
+
+    if (
+      (part.startsWith('**') && part.endsWith('**') && part.length >= 4) ||
+      (part.startsWith('__') && part.endsWith('__') && part.length >= 4)
+    ) {
+      return (
+        <strong key={i} className="font-semibold text-white">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+
+    if (
+      (part.startsWith('*') && part.endsWith('*') && part.length >= 2) ||
+      (part.startsWith('_') && part.endsWith('_') && part.length >= 2)
+    ) {
+      return (
+        <em key={i} className="italic text-zinc-200">
+          {part.slice(1, -1)}
+        </em>
+      );
+    }
+
     return part;
   });
 }

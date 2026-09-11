@@ -35,15 +35,15 @@ export const blogPosts: BlogPost[] = [
 Banyak pengguna yang baru pertama kali membeli nama domain (misalnya di Hostinger, GoDaddy, atau Namecheap) merasa kaget ketika mengetahui bahwa **membeli domain saja belum otomatis memberi kotak masuk (inbox) email**.
 
 Biasanya, penyedia domain akan langsung menawarkan paket tambahan:
-- *Email Hosting Titan / Webmail*: Rp 15.000 - Rp 30.000 / bulan / akun.
-- *Google Workspace (Gmail Domain)*: Sekitar Rp 100.000 / bulan / akun.
-- *Microsoft 365*: Mulai dari Rp 90.000 / bulan / akun.
+- **Email Hosting Titan / Webmail**: Rp 15.000 - Rp 30.000 / bulan / akun.
+- **Google Workspace (Gmail Domain)**: Sekitar Rp 100.000 / bulan / akun.
+- **Microsoft 365**: Mulai dari Rp 90.000 / bulan / akun.
 
 Untuk perusahaan skala enterprise atau instansi pemerintahan, biaya langganan tersebut tentu wajar demi jaminan SLA dan kepatuhan regulasi. Namun untuk **kebutuhan personal, freelancer, portofolio developer, atau UMKM tahap awal**, biaya bulanan berulang ini sering kali menjadi beban yang tidak efisien.
 
 Pertanyaannya: **Bisakah kita memiliki email dengan domain kustom (misal: \`halo@domainkamu.com\`) tanpa membayar biaya hosting email sama sekali?**
 
-Jawabannya: **Bisa.** Kuncinya terletak pada pemahaman arsitektur DNS, pemisahan fungsi *receiving* (penerimaan) dan *sending* (pengiriman), serta pemanfaatan layanan *email forwarding* seperti ImprovMX.
+Jawabannya: **Bisa.** Kuncinya terletak pada pemahaman arsitektur DNS, pemisahan fungsi **receiving** (penerimaan) dan **sending** (pengiriman), serta pemanfaatan layanan **email forwarding** seperti ImprovMX.
 
 ---
 
@@ -149,10 +149,10 @@ Untuk mengirim email resmi atas nama domain secara cuma-cuma, kita bisa memanfaa
 1. **Daftar Akun Brevo (dulu Sendinblue):**
 - Paket gratis Brevo memberikan kuota **300 email per hari**. Ini lebih dari cukup untuk korespondensi personal atau portofolio.
 2. **Tambahkan Domain Anda di Brevo:**
-- Masuk ke menu *Senders, Domains & Dedicated IPs* > Tambahkan domain Anda.
+- Masuk ke menu **Senders, Domains & Dedicated IPs** > Tambahkan domain Anda.
 - Brevo akan meminta Anda memasukkan record TXT (DKIM key) di DNS Hostinger untuk memvalidasi bahwa Anda adalah pemilik sah domain tersebut.
 3. **Dapatkan Kredensial SMTP:**
-- Masuk ke menu *SMTP & API* di Brevo.
+- Masuk ke menu **SMTP & API** di Brevo.
 - Catat detail SMTP:
 - **SMTP Server:** \`smtp-relay.brevo.com\`
 - **Port:** \`587\` (TLS)
@@ -171,7 +171,7 @@ Langkah pamungkas adalah menghubungkan server SMTP tersebut ke antarmuka Gmail p
 4. Pada jendela pop-up:
 - **Name:** Nama lengkap atau nama brand Anda (misal: *Triono Hidayat*).
 - **Email address:** Alamat email domain Anda (misal: *kontak@domainkamu.com*).
-- Pastikan opsi *Treat as an alias* tetap tercentang.
+- Pastikan opsi **Treat as an alias** tetap tercentang.
 - Klik **Next Step**.
 5. Masukkan konfigurasi SMTP Brevo:
 - **SMTP Server:** \`smtp-relay.brevo.com\`
@@ -291,7 +291,7 @@ export async function validateIdempotency(req: Request, redisClient: any) {
 
 Dengan menerapkan pemisahan tugas (*separation of concerns*) antara frontend publik dan mesin orkestrasi workflow n8n:
 - Waktu respons antarmuka turun dari **4.8 detik menjadi kurang dari 400ms**.
-- *Failure rate* notifikasi berkurang hingga **99.2%** berkat mekanisme automatic retry.
+- **Failure rate** notifikasi berkurang hingga **99.2%** berkat mekanisme automatic retry.
 - Tim operasional non-teknis dapat dengan mudah melihat diagram status dokumen tanpa harus membaca log server mentah.
     `.trim(),
   },
