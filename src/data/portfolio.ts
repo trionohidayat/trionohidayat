@@ -396,6 +396,18 @@ export const portfolioData = {
       tags: ["Android", "Digital Wallet", "Package Tracking", "Payment Integration", "Logistics"],
     },
     {
+      period: "November 2021 – Januari 2022",
+      role: "Web Developer",
+      organization: "Rumah Sakit Pamanukan Medical Center",
+      location: "Subang, Jawa Barat, Indonesia",
+      description: [
+        "Mengembangkan dan mengelola modul aplikasi Sistem Informasi Manajemen Rumah Sakit (SIMRS) untuk mendigitalisasi alur pelayanan medis serta administrasi pasien.",
+        "Merancang antarmuka web yang responsif dan mengoptimalkan integrasi basis data untuk pencatatan rekam medis yang cepat, akurat, dan terstruktur.",
+        "Menjaga keandalan sistem, efisiensi query basis data, serta penerapan kontrol hak akses guna melindungi kerahasiaan data rekam medis pasien.",
+      ],
+      tags: ["Web Development", "SIMRS", "Healthcare Systems", "Database Management", "Web Application"],
+    },
+    {
       period: "Maret 2020 – Oktober 2021",
       role: "WordPress Developer",
       organization: "PT Spekta Cipta Interusa",

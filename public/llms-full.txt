@@ -216,14 +216,22 @@ Guiding digital initiatives from initial technical proposals and PoC to deployme
   * Developed native Android modules for courier package tracking, warehouse scanning, and internal digital wallet transactions.
   * Enforced robust authentication and transaction security protocols for digital financial modules.
 
-### 6. PT Spekta Cipta Interusa
+### 6. Rumah Sakit Pamanukan Medical Center
+- Role: Web Developer
+- Period: November 2021 – January 2022
+- Location: Subang, West Java, Indonesia
+- Key Responsibilities:
+  * Developed web modules for the Hospital Management Information System (SIMRS), streamlining clinical workflows and patient administration.
+  * Optimized database query performance and implemented secure role-based data access for medical records.
+
+### 7. PT Spekta Cipta Interusa
 - Role: WordPress Developer
 - Period: March 2020 – October 2021
 - Location: Belitung, Indonesia
 - Key Responsibilities:
   * Configured Cloudflare CDN, server caching mechanisms, secure login flows, and automated disaster recovery backups.
 
-### 7. Kantor Camat Tanjung Pandan
+### 8. Kantor Camat Tanjung Pandan
 - Role: IT Support & Network Technician (Internship)
 - Period: July 2015 – September 2015
 - Location: Belitung, Indonesia

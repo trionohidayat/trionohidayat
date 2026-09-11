@@ -108,17 +108,6 @@ export const resumeVariants: Record<ResumeVariantId, ResumeVariantData> = {
         tags: ['System Architecture', 'Software Leadership', 'PostgreSQL', 'Client-Server Systems', 'Tender Delivery'],
       },
       {
-        role: 'Full-Stack & Web Developer',
-        organization: 'PT Spekta Cipta Interusa',
-        period: 'March 2020 – Oct 2021',
-        location: 'Belitung / Remote, Indonesia',
-        description: [
-          'Developed custom web applications and content management platforms, fine-tuning server configurations and CDN edge caching for sub-second page loads.',
-          'Engineered hardened user authentication, RBAC (role-based access control), and automated backup recovery pipelines.',
-        ],
-        tags: ['Full-Stack Web', 'CDN Edge Caching', 'Database Optimization', 'Web Security'],
-      },
-      {
         role: 'Android Developer (Logistics & Digital Wallet)',
         organization: 'PT Satria Antaran Prima Tbk. (SAP Express)',
         period: 'Jan 2022 – June 2022',
@@ -128,6 +117,29 @@ export const resumeVariants: Record<ResumeVariantId, ResumeVariantData> = {
           'Implemented cryptographic signature validation and secure session token handling for digital wallet transactions.',
         ],
         tags: ['API Integration', 'Payment Gateways', 'Security & Cryptography', 'High-Volume Transactions'],
+      },
+      {
+        role: 'Web Developer (SIMRS)',
+        organization: 'Rumah Sakit Pamanukan Medical Center',
+        period: 'Nov 2021 – Jan 2022',
+        location: 'Subang, West Java, Indonesia',
+        description: [
+          'Engineered core web modules for the Hospital Management Information System (SIMRS), digitalizing healthcare workflows and patient administration.',
+          'Developed responsive web interfaces and optimized relational database queries to accelerate medical record processing and patient data retrieval.',
+          'Maintained stringent role-based data security and access controls in compliance with health information privacy standards.',
+        ],
+        tags: ['Web Development', 'SIMRS', 'Healthcare IT', 'Database Systems', 'Full-Stack Web'],
+      },
+      {
+        role: 'Full-Stack & Web Developer',
+        organization: 'PT Spekta Cipta Interusa',
+        period: 'March 2020 – Oct 2021',
+        location: 'Belitung / Remote, Indonesia',
+        description: [
+          'Developed custom web applications and content management platforms, fine-tuning server configurations and CDN edge caching for sub-second page loads.',
+          'Engineered hardened user authentication, RBAC (role-based access control), and automated backup recovery pipelines.',
+        ],
+        tags: ['Full-Stack Web', 'CDN Edge Caching', 'Database Optimization', 'Web Security'],
       },
     ],
     featuredProjects: [
